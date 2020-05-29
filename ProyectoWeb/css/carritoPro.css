@@ -1,6 +1,4 @@
-body {
-    background-color: #fff6f6
-}
+
 h1 {
     text-align: center;
 }
@@ -175,4 +173,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', end
 display: block;
 margin-bottom: 10px;
 text-decoration: none;
+}
+.carrito{
+    left: 110%;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+.cuerpo_carrito{
+    background: rgb(32, 228, 153)(143, 80, 80);
+   color: white;
 }

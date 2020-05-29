@@ -18,6 +18,7 @@
 .cuerpo{
     text-align: center;
     background: rgb(37, 35, 35);
+    color: wheat;
 }
 .contenedor{
     background: url(../img/personas.jpg) center top;
