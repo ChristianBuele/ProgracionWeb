@@ -1,0 +1,117 @@
+:root {
+    --color-dark: #15181f;
+    --color-dark-x: #2d343f;
+    --color-dark-xx: #1f232b;
+    --color-light:#ffffff;
+    --color-grey: #f5f6f8;
+}
+.jumbotron{
+    height: 50%;
+    width: 100%;
+	text-align-last: center;
+	background: var(--color-dark-xx);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	background:#2c3e50;
+	width:100%;
+	padding:30px;
+ 
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+ 
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+.rowno-guttersbg-dark{
+	background: var(--color-dark-x);
+}
+.bordes_tienda p{
+    padding-top: 5px;
+    border-style: solid;
+    border-color: var(--color-light);
+}
+.card-img-top{
+    padding-bottom: 7px;
+}
+.q{
+    border: 0ch;
+}
+
+.main {
+	background:var(--color-dark);
+	padding:20px;
+ 
+	flex:1 1 70%;
+	/*flex:1;*/
+}
+
+aside {
+	background:var(--color-dark-x);
+	padding:20px;
+	/*FLEX*/
+	flex:1 1 15%;
+	/*flex:0 0 300px;*/
+	border-style: solid;
+	border-color: #87FFF6;
+	display: flex;
+    flex-wrap:wrap;
+    margin-right: 5px;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+ 
+aside .widget {
+	background: #d35400;
+	height:150px;
+	margin:10px;
+}
+body {
+    font-size: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: var(--color-grey);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+.bg-light {
+    background-color: var(--color-light)!important;
+}
+.bg-dark {
+    background-color: var(--color-dark)!important;
+}
+.p-6 {
+    padding: 4rem 7rem;
+}
+.contact-box {
+    padding: 3rem;
+}
+.btn {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    min-width: 10rem;
+}
+.btn-outline-dark {
+    border: 2px solid var(--color-dark-xx);
+    background-color: transparent !important;
+}
+.form-control{
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-xx);
+    border-radius: .2rem;
+    padding: 1.5rem 1rem;
+}
+.register-bg {
+    background-image: url('curso1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
