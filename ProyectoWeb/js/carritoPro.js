@@ -4,7 +4,7 @@ const carrito = document.getElementById('carrito_tabla');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
 const listaCursos = document.querySelector('#lista-carrito tbody');
-
+const precioFinal=document.querySelector('#miprecio');
 
 cargarEventListeners();
 //listener
@@ -33,6 +33,10 @@ function vaciarCarrito(e) {
 }
 function vaciarLocalStorage() {
     localStorage.clear();  
+    let cursosLS;
+    
+    cursosLS = obtenerCursosLocalStorage();
+    cargarPrecios(cursosLS);
 }
 
 
@@ -45,9 +49,12 @@ function eliminarCurso(e) {
         e.target.parentElement.parentElement.remove();
         curso = e.target.parentElement.parentElement;
         cursoId = curso.querySelector('a').getAttribute('data-id');
-        console.log(cursoId);
     }
     eliminarCursoLocalStorage(cursoId);
+    let cursosLS;
+    
+    cursosLS = obtenerCursosLocalStorage();
+    cargarPrecios(cursosLS);
 
 }
 
@@ -55,6 +62,7 @@ function eliminarCurso(e) {
 
 function eliminarCursoLocalStorage(curso) {
     let cursosLS;
+    
     cursosLS = obtenerCursosLocalStorage(); //arreglo de productos
     cursosLS.forEach(function (cursoLS, index) {
         if (cursoLS.id == curso) {
@@ -72,6 +80,7 @@ function obtenerCursosLocalStorage() {
     } else {
         cursosLs = JSON.parse(
             localStorage.getItem('cursos'));
+            cargarPrecios(cursosLs);
     }
     //paso a cargar los precios de los preoductos
   
@@ -79,13 +88,22 @@ function obtenerCursosLocalStorage() {
 
 
 }
-
+function cargarPrecios(cursosLS){
+    precioFinal.innerHTML='';
+let suma=0;
+    cursosLS.forEach(function (curso) {
+        console.log(suma);
+        suma+=parseInt(curso.precio.substr(1,curso.precio.length-1),10);
+    });
+    const dato=document.createElement('h2');
+    dato.innerHTML= `<h2>${suma}</h2>`;
+    precioFinal.appendChild(dato);
+}
 ///muesto los datos guardados
 function leerLocalStorage() {
 
     let cursosLS;
     cursosLS = obtenerCursosLocalStorage();
-    console.log(cursosLS);
 
     cursosLS.forEach(function (curso) {
         const row = document.createElement('tr');
