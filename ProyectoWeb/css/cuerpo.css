@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@ body{
     height: 100vh;
 }
 .esqueleto{
+    height: 100%;;
 }
 .log{
     width: 321px;
@@ -28,6 +30,9 @@ body{
     text-align: center;
     
      
+}
+.formulario{
+    height: 100%;
 }
 .logologin{
     background: rgba(0, 0, 0, 0);

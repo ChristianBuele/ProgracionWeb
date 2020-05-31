@@ -78,24 +78,27 @@
             </div>
           </nav>
     </div>
-    <div class="esqueleto">
+    <div class="esqueleto" >
         <div class="log">
-            <div class="login-box" id="listaBotones_login">
+            <div class="login-box" >
                 <div class="logologin">
                     <a href="index.html">
                         <img class="avatar" src="img/logo2.jpg" alt="logoEmpresa"></a>
                 </div>
-                <div class="formulariologin">
+                <div class="formulariologin" id="listaBotones_login">
                     <h1>! Bienvenido !</h1>
-                    <form>
+                    <form class="formulario">
                         <!-- datos-->
                         <label for="Usuario">Usuario</label>
-                        <input type="text" placeholder="Ingrese el usuario">
+                        <input style="color: wheat;"  type="text" id="nomUsuario" placeholder="Ingrese el usuario">
                         <label for="Usuario">Contraseña</label>
-                        <input type="password" placeholder="Ingrese Contraseña">
-                        <a href="#" class="fb btn">
+                        <input style="color: wheat;" type="password" id="password" placeholder="Ingrese Contraseña">
+                        <a href="#" class="fb btn iniciar">
                             <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                         </a>
+                        <div id="verificacion"><!--para ver si ha puesto los datos-->
+                          
+                        </div>
                         <label for="Usuario">------------------------------------------------</label>
                         <h1 style="font-size: 16px;">Ingresar con Facebook</h1>
                         <div class="fb-login-button" data-size="medium" data-button-type="continue_with"
@@ -105,7 +108,7 @@
                         <h1 style="font-size: 16px;padding: 10px;">Ingresar con Google</h1>
                         <div class="g-signin2" data-onsuccess="onSignIn"></div>
                         <label for="Usuario">---------------Registrese--------------</label>
-                        <a href="registro.html" class="fb btn">
+                        <a href="registro.html" class="fb btn ">
                             Registrarme
                         </a>
 
