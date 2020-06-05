@@ -1,0 +1,20 @@
+.contenedorProductos{
+    background: #2d343f;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    align-self: center;
+    left:15%;
+}
+.cuerpoProductos{
+    background:white;
+  
+}
+.cuerpo_producto{
+    background:  #15181f;
+    text-align: center;
+}
+.cuerpo_producto p{
+    font-size: 1vw;
+}
+
