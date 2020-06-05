@@ -33,11 +33,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <div class="containerr">
-                    <a class="navbar-brand" href="#">INFINITY PRODUCTIONS</a>
+                    <a class="navbar-brand" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">INFINITY PRODUCTIONS</a>
                 </div>
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0 h5">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="productoFinal.html">Productos</a>
@@ -266,7 +266,7 @@
             <br>
             <br>
             <h1><i class="fas fa-plus"></i> AÑADIR COMBO</h1>
-            <div class="datosCombos"  >
+            <div id="add_combos" class="datosCombos"  >
                 <div class="md-form input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm"
@@ -283,7 +283,17 @@
                     <input id="precioCombo" type="number" class="form-control" aria-label="Sizing example input"
                         aria-describedby="inputGroupMaterial-sizing-sm" style="color: white;" required value="0" min="0">
                 </div>
-               
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div>
+                  <button type="button" id="addproducto" class="btn btn-sm btn-rounded btn-sm my-0 iniciarPro"><i class="far fa-save"></i> Agregar
+                    Producto</button>
                 
                 <div class="form-group green-border-focus">
                     <label for="exampleFormControlTextarea5" style="color: white;">Descripción</label>

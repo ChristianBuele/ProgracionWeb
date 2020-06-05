@@ -94,18 +94,18 @@
                                   <div class="form-row mb-2">
                                       <div class="form-group col-md-6">
                                           <label class="font-weigth-bold">Nombre <span class="text-danger">*</span></label>
-                                          <input type="text" class="form-control" placeholder="Tu nombre">
+                                          <input id="nombre" type="text" class="form-control" placeholder="Tu nombre">
                                       </div>
                                       <div class="form-group col-md-6">
                                           <label class="font-weigth-bold">Apellido <span class="text-danger">*</span></label>
-                                          <input type="text" class="form-control" placeholder="Tu apellido">
+                                          <input id="apellido" type="text" class="form-control" placeholder="Tu apellido">
                                       </div>
                                   </div>
                                   <div class="form-group mb-3">
                                       <label class="font-weigth-bold">Contraseña<span class="text-danger">*</span></label>
-                                      <input type="password" class="form-control" placeholder="Ingresa una contraseña">
+                                      <input id="contra" type="password" class="form-control" placeholder="Ingrese la Contraseña">
                                   </div>
-                                  <button class="btn btn-primary" align='center'>Registrate</button>
+                                  <button id="btn_cambios" class="btn btn-primary" align='center'>Guardar Cambios</button>
                               </form>
                               <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | 2020 Infinity Productions</small>
                           </div>
@@ -120,12 +120,12 @@
               </section>
           </div>
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <h2 align='center'>Métodos de Pago</h2>
+              <h2 style="align-self: auto;">Métodos de Pago</h2>
               <section >
                   <div class="row no-gutters ">
                       <div class="col-xl-7 col-lg-12 d-flex">
                           <div class="contenedor_tarjetas">
-                              <h3 align='center'>Añadir Tarjetas</h3>
+                              <h3 style="align-self: auto;">Añadir Tarjetas</h3>
                               <!--todo lo de aqui es para lo relacionado con la tarjeta --->
                               <section class="tarjeta" id="tarjeta">
                                 <div class="delantera">
@@ -211,35 +211,35 @@
                             </div>
                       </div>
                       <div class="col-xl-5 col-lg-12">
-                          <h3 align='center'>Tarjetas Disponibles</h3>
-                          <div class="table-responsive">
+                          <h3 style="align-self: auto;">Tarjetas Disponibles</h3>
+                          <div class="table-responsive cont">
                               <table class="table table-bordered table-hover table-dark">
-                                  <thead>
+                                  <thead style="background: #20252C;">
                                       <tr>
-                                          <th>Numero de la tarjeta</th>
-                                          <th>Editar</th>
-                                          <th>Eliminar</th>
+                                          <th><i class="fas fa-sort-numeric-up-alt"></i> Numero de la tarjeta</th>
+                                          <th><i class="fas fa-edit"></i> Editar</th>
+                                          <th><i class="far fa-trash-alt"></i>Eliminar</th>
                                       </tr>
                                   </thead>
                                   <tbody>
                                       <tr>
                                           <td>129029019010201</td>
-                                          <td href="#home">Editar</td>
-                                          <td>Eliminar</td>
+                                          <td><button class="btn btn-primary"><i class="fas fa-edit"></i>Editar</button></td>
+                                          <td><button class="btn btn-primary"><i class="far fa-trash-alt"></i>Eliminar</button></td>
                                       </tr>
                                   </tbody>
                                   <tbody>
                                       <tr>
                                           <td>129029019010201</td>
-                                          <td>Editar</td>
-                                          <td>Eliminar</td>
+                                          <td><button class="btn btn-primary"><i class="fas fa-edit"></i>Editar</button></td>
+                                          <td><button class="btn btn-primary"><i class="far fa-trash-alt"></i>Eliminar</button></td>
                                       </tr>
                                   </tbody>
                                   <tbody>
                                       <tr>
                                           <td>129029019010201</td>
-                                          <td>Editar</td>
-                                          <td>Eliminar</td>
+                                          <td><button class="btn btn-primary"><i class="fas fa-edit"></i>Editar</button></td>
+                                          <td><button class="btn btn-primary"><i class="far fa-trash-alt"></i>Eliminar</button></td>
                                       </tr>
                                   </tbody>
                               </table>
@@ -249,23 +249,23 @@
               </section>
           </div>
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-              <h2 align='center'>Historial de Compras</h2>
-              <div class="table-responsive">
+              <h2 style="align-self: auto;">Historial de Compras</h2>
+              <div class="table-responsive contq">
                 <table class="table table-bordered table-hover table-dark">
-                    <thead>
+                    <thead thead style="background: #20252C;">
                         <tr>
-                            <th>Numero de Compra</th>
-                            <th>Fecha de Compra</th>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Precio Total de la Compra</th>
+                            <th><i class="fas fa-sort-numeric-up-alt"></i>  Numero de Compra</th>
+                            <th><i class="fas fa-calendar-alt"></i> Fecha de Compra</th>
+                            <th><i class="fab fa-product-hunt"></i> Producto</th>
+                            <th><i class="fas fa-cart-plus"></i>  Cantidad</th>
+                            <th><i class="fas fa-dollar-sign"></i> Precio Total de la Compra</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>129029019010201</td>
-                            <td href="#home">Editar</td>
-                            <td>Eliminar</td>
+                            <td>8/11/2019</td>
+                            <td>Sesion Basica</td>
                             <td>1</td>
                             <td>30</td>
                         </tr>
@@ -273,8 +273,8 @@
                     <tbody>
                         <tr>
                             <td>129029019010201</td>
-                            <td>Editar</td>
-                            <td>Eliminar</td>
+                            <td>8/11/2019</td>
+                            <td>Sesion Basica</td>
                             <td>1</td>
                             <td>30</td>
                         </tr>
@@ -282,8 +282,8 @@
                     <tbody>
                         <tr>
                             <td>129029019010201</td>
-                            <td>Editar</td>
-                            <td>Eliminar</td>
+                            <td>8/11/2019</td>
+                            <td>Sesion Basica</td>
                             <td>1</td>
                             <td>30</td>
                         </tr>
@@ -291,7 +291,7 @@
                 </table>
             </div>
             <div>
-              <h2 align='center'>Compras en proceso</h2>
+              <h2 style="align-self: auto;">Compras en proceso</h2>
             </div>
           </div>
         </div>
@@ -327,6 +327,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/main.js"></script>
+    <script src="js/validarCambioPerfil.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

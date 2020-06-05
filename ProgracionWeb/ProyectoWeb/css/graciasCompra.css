@@ -1,0 +1,27 @@
+body{
+    background: #15181f;
+}
+td{
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+.cont{
+    width: 1000px;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.cont_bn{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width:1000px){
+    .cont{
+        width: 100%;
+    }
+}
