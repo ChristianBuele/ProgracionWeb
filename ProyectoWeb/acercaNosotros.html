@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
      <!-- Required meta tags -->
      <meta charset="utf-8">
@@ -12,12 +12,12 @@
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
  <!-- Google Fonts -->
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
- 
  <!-- Bootstrap core CSS -->
  <!-- Material Design Bootstrap -->
  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
  <link rel="stylesheet" href="css/contacto.css">
-    <title>Hello, world!</title>
+ <link rel="stylesheet" href="css/estiloAcerca.css">
+    <title>Acerca de Nosotros</title>
   </head>
   <body class="bg-dark">
     <div class="cabezera">
@@ -84,7 +84,46 @@
               3. Ayuda para hacer crecer el negocio del distribuidor.<br></p> 
           <p>Por ello, creemos que aportando soluciones, desarrollando servicios innovadores, ofreciendo herramientas sencillas y enseñando cómo utilizarlas correctamente, podemos ayudar a nuestros clientes a mejorar su comunicación interna y externa con clientes, proveedores y entorno.</p>
   </div>
-   
+  <h2 style="color: #f5f6f8;">Algunos de nuestros trabajos</h2>
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+  
+    <!-- The slideshow -->
+    <div class="carousel-inner" >
+      <div class="carousel-item active">
+        <img src="img/a.jpg" class="d-block w-100" alt="Los Angeles" width="100" height="600">
+      </div>
+      <div class="carousel-item">
+        <img src="img/2020-02-15 17.50.51_1.jpg" class="d-block w-100" alt="Chicago" width="100" height="600">
+      </div>
+      <div class="carousel-item">
+        <img src="img/curso4.jpg" class="d-block w-100" alt="New York" width="100" height="800">
+      </div>
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev contenedorProductos" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
+<div>
+  <form>
+    <h2 style="color: #f5f6f8; text-align: center;">CONTACTO</h2>
+    <input type="text" name="Nombre" placeholder="Nombre" id="nombre"> 
+    <input type="email" name="Correo" placeholder="Correo" id="correo"> 
+    <input type="text" name="Telefono" placeholder="Telefono" id="telefono"> 
+    <textarea name="Mensaje" placeholder="Escriba aqui su mensaje" id="mensaje"></textarea>
+    <input type="button" value="ENVIAR" id="boton">
+  </form>
 </div>
 <footer>
     <div class="contenedor"><!--rojooo-->
@@ -111,12 +150,7 @@
         </div>
     </div>
 </footer>
-
-
-
-
-    
-    
+<script src="js/validarComentario.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

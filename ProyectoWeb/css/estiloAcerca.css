@@ -1,58 +1,35 @@
-:root {
-    --color-dark: #15181f;
-    --color-dark-x: #2d343f;
-    --color-dark-xx: #1f232b;
-    --color-light:#ffffff;
-    --color-grey: #f5f6f8;
+form{
+    width: 450px;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 20px;
 }
-body {
-    font-size: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
-    background-color: var(--color-grey);
-    color: var(--color-light);
-    letter-spacing: .05rem;
-}
-.bg-light {
-    background-color: var(--color-light)!important;
-}
-.bg-dark {
-    background-color: var(--color-dark)!important;
-}
-.p-6 {
-    padding: 4rem 7rem;
-}
-.contact-box {
-    padding: 3rem;
-}
-.btn {
-    font-weight: 400;
-    padding: 1rem 2rem;
-    border-radius: 5rem;
-    min-width: 10rem;
-}
-.btn-outline-dark {
-    border: 2px solid var(--color-dark-xx);
-    background-color: transparent !important;
-}
-.form-control{
-    background-color: var(--color-dark-xx);
-    border: 2px solid var(--color-dark-xx);
-    border-radius: .2rem;
-    padding: 1.5rem 1rem;
-}
-.register-bg {
-    background-image: url('curso1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-}
-.jumbotron{
-    height: 50%;
+input, textarea{
     width: 100%;
-	text-align-last: center;
-	background: var(--color-dark-xx);
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+textarea{
+    min-height: 100px;
+    max-width: 200px;
+    max-width: 100%;
+}
+#boton{
+    background:#2171DD;
+    color: #ffffff;
+    padding: 20px;
 }
 p{
-    padding-block:25 px;
+    text-align: justify ;
+}
+#boton:hover{
+    cursor: pointer;
+}
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
 }
