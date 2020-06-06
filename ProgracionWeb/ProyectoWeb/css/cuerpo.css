@@ -6,6 +6,7 @@ body{
     background-size:cover; 
     font-family: sans-serif;
     height: 100vh;
+    
 }
 .esqueleto{
     height: 100%;;
@@ -60,6 +61,7 @@ body{
     border-bottom: 1px solid rgba(253, 253, 253, 0.753);
     outline: none;
     font-size: 16px;
+    
 }
 .formulariologin input{
     width: 100%;

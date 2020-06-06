@@ -1,5 +1,5 @@
-const btn_addProductos = document.getElementById('addProductos');
-const btn_addCombo = document.getElementById('add_combos');
+//const btn_addProductos = document.querySelector('.datosProductos');
+//const btn_addCombo = document.getElementById('add_combos');
 const btn_addUsuario = document.getElementById('addUsuarios');
 const verificacionProducto=document.querySelector('#verificacionProducto');
 const verificacionCombo=document.querySelector('#verificacionCombo');
@@ -9,7 +9,7 @@ iniciar();
 function iniciar(){
     
     btn_addProductos.addEventListener('click',ejecutarBotones);
-    btn_addCombo.addEventListener('click',ejecutarBotones);
+   // btn_addCombo.addEventListener('click',ejecutarBotones);
     btn_addUsuario.addEventListener('click',ejecutarBotones);
 }
 function ejecutarBotones(e){
