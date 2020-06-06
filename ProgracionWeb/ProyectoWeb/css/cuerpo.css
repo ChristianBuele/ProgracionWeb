@@ -11,13 +11,11 @@ body{
     height: 100%;;
 }
 .log{
-    width: 321px;
+    width: 40%;
     margin: auto;
-    
 }
 .login-box{
-    width: 320px;
-    height: 700px;
+    width: 100%;
     color: #fff;
     left: 50%;
     
@@ -39,9 +37,13 @@ body{
     float:center;
     text-align: center;
     padding: 10px;
+    width: 100%;
+}
+.datos{
+    background: rgba(0, 0, 0, 0.281);
+
 }
 .formulariologin{
-    background: rgba(0, 0, 0, 0.226);
     height: 100%;
     color: #fff;
     left: 50%;
@@ -69,6 +71,12 @@ body{
     font-size: 15px;
     border-radius: 20px;
     width: 100%;
+}
+.datos a{
+    background:#0fadb83d;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 20px;
 }
 
 

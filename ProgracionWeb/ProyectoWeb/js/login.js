@@ -1,14 +1,15 @@
-const botones = document.getElementById('listaBotones_login');
-const sesion=document.querySelector('#verificacion');
+const botones = document.querySelector('.formulariologin');
+const sesion=document.querySelector('.verificacion');
 
 iniciar();
 
 function iniciar(){
-    botones.addEventListener('click',ejecutarBotones);
+   botones.addEventListener('click',ejecutarBotones);
 
 }
 function ejecutarBotones(e){
     e.preventDefault();
+    console.log('entra');
     if (e.target.classList.contains('iniciar')) {
         leerDatos();
     }
