@@ -33,11 +33,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <div class="containerr">
-                    <a class="navbar-brand" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">INFINITY PRODUCTIONS</a>
+                    <a class="navbar-brand" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">INFINITY
+                        PRODUCTIONS</a>
                 </div>
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0 h5">
                     <li class="nav-item active">
-                        <a class="nav-link" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">Inicio
+                            <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="productoFinal.html">Productos</a>
@@ -104,19 +106,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr style="color: aliceblue;"> 
-                                        <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
-                                        <td class="pt-3-half" contenteditable="true">30</td>
-                                        <td class="pt-3-half" contenteditable="true">Deepends</td>
-                                        <td class="pt-3-half" contenteditable="true">Spain</td>
-        
+                                    <tr style="color: aliceblue;">
+                                        <td class="pt-3-half" contenteditable="true">31/06/2020</td>
+                                        <td class="pt-3-half" contenteditable="true">Bautizo</td>
+                                        <td class="pt-3-half" contenteditable="true">Cuenca-Remigo Crespo y ...</td>
+                                        <td class="pt-3-half" contenteditable="true">Emanuel Alvarez</td>
+
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-              
+
 
             </div>
             <!--/eventos pendientes-->
@@ -124,7 +126,8 @@
                 Si desea generar un informe con los detalles de los eventos genere un informe en el boton generar
                 informe.
             </h1>
-            <button type="button" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-file-alt"></i> Generar Informe</button>
+            <button type="button" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-file-alt"></i> Generar
+                Informe</button>
 
             <!--mod prodcutos-->
             <br>
@@ -146,11 +149,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr style="color: aliceblue;"> 
-                                    <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
-                                    <td class="pt-3-half" contenteditable="true">30</td>
-                                    <td class="pt-3-half" contenteditable="true">Deepends</td>
-                                    <td class="pt-3-half" contenteditable="true">Spain</td>
+                                <tr style="color: aliceblue;">
+                                    <td class="pt-3-half" contenteditable="true">Sesión Básica</td>
+                                    <td class="pt-3-half" contenteditable="true">30 fotografias mas ..</td>
+                                    <td class="pt-3-half" contenteditable="true">100$</td>
+                                    <td class="pt-3-half" contenteditable="true">0%</td>
 
                                     <td>
                                         <span class="table-remove"><button type="button"
@@ -165,56 +168,48 @@
                 </div>
             </div>
             <!-- /Tabla Productos -->
-            <button type="button" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-save"></i> Guardar Cambios</button>
+            <button type="button" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-save"></i> Guardar
+                Cambios</button>
             <!--/mod prodcutos-->
+
+
+
+
             <!--add producto-->
             <br>
             <br>
             <h1><i class="fas fa-plus"></i> AÑADIR PRODUCTOS</h1>
-            <div class="datosProductos" >
-                <div class="md-form input-group input-group-sm mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm"
-                            style="color: white;">Nombre</span>
+            <div class="datosProductos">
+                <form>
+                    <div class="form-group">
+                        <label>Nombre Producto</label>
+                        <input type="text" id="nombreProducto" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="5">
                     </div>
-                    <input id="nomProducto" type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroupMaterial-sizing-sm" style="color: white;" required>
-                </div>
-                <div class="md-form input-group input-group-sm ">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm"
-                            style="color: white;">Precio</span>
+                    <div class="form-group">
+                        <label>Precio Producto</label>
+                        <input type="number" min="0" id="precioProducto" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required>
                     </div>
-                    <input id="precioProducto" type="number" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroupMaterial-sizing-sm" style="color: white;" required value="0" min="0">
-                </div>
-            
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="file" min="0" id="ImagenProducto" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="5">
                     </div>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                    </div>
-                  </div>
-                 
-        
 
-                  
-                <div class="form-group green-border-focus">
-                    <label for="exampleFormControlTextarea5" style="color: white;">Descripción</label>
-                    <textarea id="desProducto" class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
-                </div>
-                <div id="verificacionProducto">
+                    <div class="form-group green-border-focus">
+                        <label for="exampleFormControlTextarea5" style="color: white;">Descripción</label>
+                        <textarea id="desProducto" class="form-control" id="exampleFormControlTextarea5" rows="3"
+                            required minlength="15"></textarea>
+                    </div>
 
-                </div>
-                <button type="button" id="addproducto" class="btn btn-sm btn-rounded btn-sm my-0 iniciarPro"><i class="far fa-save"></i> Agregar
-                    Producto</button>
-
+                    <button type="submit" id="addproducto" class="btn btn-sm btn-rounded btn-sm my-0 "><i
+                            class="far fa-save"></i> Agregar
+                        Producto</button>
+                </form>
             </div>
-           
-             
+
+
 
             <!--/add producto-->
 
@@ -259,52 +254,41 @@
             <button type="button" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-save"></i> Guarda
                 Cambios</button>
             <!-- /Tabla Combos -->
-            
+
             <!--/modificar combo-->
 
             <!--add combo-->
             <br>
             <br>
             <h1><i class="fas fa-plus"></i> AÑADIR COMBO</h1>
-            <div class="datosCombos"  >
-                <div class="md-form input-group input-group-sm mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm"
-                            style="color: white;">Nombre Combo</span>
+            <div class="datosCombos">
+                <form>
+                    <div class="form-group">
+                        <label>Nombre Combo</label>
+                        <input type="text" id="nombreCombo" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="5">
                     </div>
-                    <input id="nomCombo" type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroupMaterial-sizing-sm" style="color: white;" required>
-                </div>
-                <div class="md-form input-group input-group-sm ">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm"
-                            style="color: white;">Precio Combo</span>
+                    <div class="form-group">
+                        <label>Precio Combo</label>
+                        <input type="number" min="0" id="precioCombo" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required>
                     </div>
-                    <input id="precioCombo" type="number" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroupMaterial-sizing-sm" style="color: white;" required value="0" min="0">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    <div class="form-group">
+                        <label>Imagen</label>
+                        <input type="file" min="0" id="ImagenCombo" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="5">
                     </div>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                    </div>
-                  </div>
-                  <button type="button" id="addproducto" class="btn btn-sm btn-rounded btn-sm my-0 iniciarPro"><i class="far fa-save"></i> Agregar
-                    Producto</button>
-                
-                <div class="form-group green-border-focus">
-                    <label for="exampleFormControlTextarea5" style="color: white;">Descripción</label>
-                    <textarea id="desCombo" class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
-                </div>
-                <div id="verificacionCombo">
 
-                </div>
-                <button type="button" id="addproducto" class="btn btn-sm btn-rounded btn-sm my-0 iniciarCombo"><i class="fas fa-plus"></i> Agregar
-                    Combo</button>
+                    <div class="form-group green-border-focus">
+                        <label for="exampleFormControlTextarea5" style="color: white;">Descripción</label>
+                        <textarea id="desCombo" class="form-control" id="exampleFormControlTextarea5" rows="3"
+                            required minlength="15"></textarea>
+                    </div>
 
+                    <button type="submit" id="addCombo" class="btn btn-sm btn-rounded btn-sm my-0 "><i
+                            class="far fa-save"></i> Agregar
+                        Producto</button>
+                </form>
             </div>
             <!--/add combo-->
 
@@ -330,8 +314,8 @@
                                     <td class="pt-3-half" contenteditable="true">Uusuario1</td>
                                     <td>
                                         <span class="table-remove"><button type="button"
-                                                class="btn btn-sm btn-sm my-0"><i
-                                                    class="fas fa-ban"></i> Bloquear</button></span>
+                                                class="btn btn-sm btn-sm my-0"><i class="fas fa-ban"></i>
+                                                Bloquear</button></span>
                                     </td>
                                     <td>
                                         <span class="table-remove"><button type="button"
@@ -345,9 +329,9 @@
                     </div>
                 </div>
             </div>
-            <button type="button" id="guardaCombo" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-save"></i> Guardar
+            <button type="button" id="guardaCombo" class="btn btn-sm btn-rounded btn-sm my-0"><i
+                    class="far fa-save"></i> Guardar
                 Cambios</button>
-            <!-- /Tabla Combos -->
             <!--/USUARIOS-->
 
             <!--ADD USUARIO-->
@@ -355,41 +339,41 @@
             <br>
             <h1><i class="fas fa-user-plus"></i> AÑADIR USUARIO</h1>
 
-            <!--/ADD USUARIO-->
-            <!-- Material input -->
-           <div class="container" id="addUsuarios"> 
+            <div class="container" id="addUsuarios">
 
-            <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
-                </div>
-                <input id="nomUsuario" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Apellidos</span>
-                </div>
-                <input id="appUsuario" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Correo</span>
-                </div>
-                <input id="correoUsuario" type="mail" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Contraseña</span>
-                </div>
-                <input id="passUsuario" type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-              <div id="verificacionUsuario">
+                <form>
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <input type="text" id="nombreUsuario" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text"  id="apellidoUsuario" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="mail" id="correoUsuario" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" min="0" id="passUsuario" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required>
+                    </div>
+                   
+                   
 
-              </div>
-              <button type="button" id="guardaCombo" class="btn btn-sm btn-rounded btn-sm my-0 iniciarUsuarios"><i class="fas fa-plus"></i>  Agregar
+                   
 
-           </div>
-<br>
+                    <button type="submit" id="addUsuario" class="btn btn-sm btn-rounded btn-sm my-0 "><i
+                            class="far fa-save"></i> Agregar
+                        Usuario</button>
+                </form>
+
+            </div>
+            <br>
 
         </div>
 
@@ -430,7 +414,7 @@
 
 
 
-<script src="js/administracion.js"></script>
+    <script src="js/administracion.js"></script>
 
 
     <!-- Optional JavaScript -->

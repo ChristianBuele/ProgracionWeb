@@ -53,3 +53,25 @@
     border: 1px solid #8bc34a;
     box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
 }
+.contenedor_admin input[type="text"], .contenedor_admin input[type="password"], .contenedor_admin input[type="number"],.contenedor_admin input[type="mail"] {
+    background: rgba(11, 64, 78, 0);
+    border: none;
+    border-bottom: 1px solid rgba(253, 253, 253, 0.753);
+    outline: none;
+    font-size: 16px;
+    color: white;
+}
+.contenedor_admin input[type="file"]{
+    background: rgba(11, 64, 78, 0);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+}
+input:invalid {
+    border: 2px dashed red;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }
