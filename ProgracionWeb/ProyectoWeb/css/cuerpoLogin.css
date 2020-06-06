@@ -6,7 +6,6 @@
     left: 50px;
    
 }
-.buton{}
 #btn_cuenta{
     border-radius: 20px;
     color: rgb(255, 255, 255);
@@ -69,4 +68,7 @@
     padding-bottom:5px ;
     padding-top: 5px;
     border-radius:3cm ;
+}
+@media (max-width: 575.98px) {
+    .lo
 }

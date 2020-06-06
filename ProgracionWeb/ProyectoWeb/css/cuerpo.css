@@ -82,3 +82,8 @@ body{
 }
 
 
+@media (max-width: 600px) {
+   .log{
+       width: 100vh;
+   }
+}
