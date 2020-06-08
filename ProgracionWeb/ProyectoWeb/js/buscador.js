@@ -30,5 +30,8 @@ const filtrar =()=>{
         <li><a href="" style="color: red">Valor No encontrado</a></li>
        `
     }
+    if(texto===""){
+        resultado.innerHTML ="";
+    }
 }
 formulario.addEventListener('keyup',filtrar);
