@@ -25,6 +25,7 @@ function cargarEventListeners() {
 function comprarCurso(e) {
     e.preventDefault();
     if (e.target.classList.contains('agregar-carrito')) {
+        alert('Su producto ha sido agregado al carrito');
         const curso = e.target.parentElement;
         console.log(curso);
         ///hago la toma de datos del curso

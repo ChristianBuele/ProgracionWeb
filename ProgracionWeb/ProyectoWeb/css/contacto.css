@@ -62,3 +62,12 @@
    color: rgb(241, 238, 238);
    
 }
+#vaciar-carrito{
+    background:#2171DD;
+    color: #ffffff;
+    padding: 20px;
+    padding-bottom:5px ;
+    padding-top: 5px;
+    border-radius:3cm ;
+    text-size-adjust: 23px;
+}
