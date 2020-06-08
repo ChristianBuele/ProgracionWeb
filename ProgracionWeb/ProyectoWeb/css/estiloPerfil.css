@@ -45,7 +45,7 @@ body {
 border-color: white;
 }
 .register-bg {
-    background-image: url('curso1.jpg');
+    background-image: url('../img/frases/bodafrase.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
