@@ -16,8 +16,6 @@ function cargarEventListeners() {
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
     //para cargar datos almacenados
     document.addEventListener('DOMContentLoaded', leerLocalStorage);
-
-
 }
 
 
