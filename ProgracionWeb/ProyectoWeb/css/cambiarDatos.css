@@ -89,7 +89,7 @@ ul.nav a{
 }
 .btn{
     border-radius:30% ;
-    vertical-align: autos;
+    vertical-align: auto;
 }
 .table{
     border-left: 5px;

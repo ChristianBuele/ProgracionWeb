@@ -6,7 +6,7 @@ body{
     background-size:cover; 
     font-family: sans-serif;
     height: 100vh;
-    
+    width: 100%;
 }
 .esqueleto{
     height: 100%;;
@@ -19,6 +19,8 @@ body{
     width: 100%;
     color: #fff;
     left: 50%;
+ 
+    box-sizing: border-box;
     
 }
 .logologin .avatar{
@@ -42,6 +44,7 @@ body{
 }
 .datos{
     background: rgba(0, 0, 0, 0.281);
+    height: 100%;
 
 }
 .formulariologin{
@@ -52,7 +55,7 @@ body{
 }
 .formulariologin h1{
     text-align: center;
-    font-size: 30px;
+    font-size: 1rem;
     top: 0px;
 }
 .formulariologin input[type="text"], .formulariologin input[type="password"]{
@@ -61,6 +64,7 @@ body{
     border-bottom: 1px solid rgba(253, 253, 253, 0.753);
     outline: none;
     font-size: 16px;
+    width: 100%;
     
 }
 .formulariologin input{
@@ -72,18 +76,22 @@ body{
     color: rgb(255, 255, 255);
     font-size: 15px;
     border-radius: 20px;
-    width: 100%;
+    width: 70%;
 }
 .datos a{
     background:#0fadb83d;
     color: rgb(255, 255, 255);
     font-size: 15px;
     border-radius: 20px;
+    width: 70%;
 }
 
+@media (max-width: 575.98px) {
+    .log {
+        width: 100%;
+        height: 100%;
+    }
 
-@media (max-width: 600px) {
-   .log{
-       width: 100vh;
-   }
+   
+
 }
