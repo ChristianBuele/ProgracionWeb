@@ -63,11 +63,12 @@
    
 }
 #vaciar-carrito{
-    background:#2171DD;
+    background:rgb(206, 187, 18);
     color: #ffffff;
     padding: 20px;
     padding-bottom:5px ;
     padding-top: 5px;
     border-radius:3cm ;
     text-size-adjust: 23px;
+    
 }
