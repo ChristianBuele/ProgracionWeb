@@ -21,7 +21,7 @@ const filtrar =()=>{
         let nombre=pro.nombre.toLowerCase();
         if(nombre.indexOf(texto)!==-1){
             resultado.innerHTML += `
-            <li><a href="sesiones.html" style="color: rgb(3, 143, 131);">${pro.nombre}- Valor: ${pro.valor}</a></li>
+            <li><a href="sesiones.html" style="color: white;">${pro.nombre}- Valor: ${pro.valor}</a></li>
            `
         }
     }
