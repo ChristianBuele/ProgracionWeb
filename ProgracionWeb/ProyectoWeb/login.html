@@ -5,9 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-signin-client_id"
-    content="http://557246915052-gu1n8fijrlqprh4445pgmrukgibkhv19.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="689122452455-us9hto3u0u1u8eacssrb7u0b1llhu9q1.apps.googleusercontent.com">
+
    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -98,17 +97,20 @@
                 <div class="datos">
                     <div class="formulariologin" >
                         <h1>! Bienvenido !</h1>
-                        <form class="formulario">
+                        <form class="formulario" id="formularioLog">
                             <!-- datos-->
                             <label for="Usuario">Usuario</label>
-                            <input style="color: white;"  type="text" id="nomUsuario" placeholder="Ingrese el usuario">
+                            <input style="color: white;"  type="text" name="correo" placeholder="Ingrese el usuario">
                             <label for="Usuario">Contraseña</label>
-                            <input style="color: white;" type="password" id="password" placeholder="Ingrese Contraseña">
-                            <a href="#" class="fb btn iniciar">
+                            <input style="color: white;" type="password" name="password" placeholder="Ingrese Contraseña">
+                            <button  class="fb btn iniciar" type="submit">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
-                            </a>
-                            <div class="verificacion"><!--para ver si ha puesto los datos-->
-                              
+                            </button>
+                            
+                            <div class="verificacion" id="respuesta">
+                                <div class="alert alert-primary" role="alert" style="background: rgba(255, 255, 255, 0.137);color:white;">
+                                    Bienvenido               
+                             </div>
                             </div>
                             <label for="Usuario">------------------------------------------------</label>
                             <h1 style="font-size: 16px;">Ingresar con Facebook</h1>
@@ -117,9 +119,9 @@
                                 data-width="">
                             </div>
                             <h1 style="font-size: 16px;padding: 10px;">Ingresar con Google</h1>
-                           
+                            
                             <div class="g-signin2" data-onsuccess="onSignIn" style="width: 100%; margin: auto; margin-left: 35%;"></div>
-                           
+                            <div class="userContent" style="display: none;"></div>
                             <label for="Usuario">---------------Registrese--------------</label>
                            
                         </form>
@@ -167,7 +169,9 @@
         </div>
     </footer>
     <script src="js/buscador.js"></script>
-    <script src="js/login.js"></script>
+    <!--<script src="js/login.js"></script></!-->
+    <script  src="js/loginGoogle.js"></script>
+    <script src="js/loginDatosPropios.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -191,6 +195,7 @@
             });
         };
     </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
     </body>
