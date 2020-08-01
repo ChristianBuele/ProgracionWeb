@@ -15,7 +15,7 @@ formularios.addEventListener('submit', function (e) {
               "rol": 'usuario'
          });
          console.log(raw)
-         enviar(raw);
+         enviar(raw,datos.get('correoUsuario'));
 });
 
 
@@ -34,7 +34,7 @@ function update_user_data(profile) {
           "contrasenia_usuario": profile.getId(),
           "rol": 'usuario'
         });
-     enviar(raw)   
+     enviar(raw,profile.getEmail())   
 }
 //facebook
 function statusChangeCallback(response) {
@@ -85,13 +85,13 @@ function statusChangeCallback(response) {
               "rol": 'usuario'
          });
     console.log('se va ' + raw)
-   enviar(raw);
+   enviar(raw,response.email);
     });
     
   }
 
 //
-function enviar(raw) {
+function enviar(raw,correo) {
     var requestOptions = {
          method: 'POST',
          headers: myHeaders,
@@ -100,10 +100,10 @@ function enviar(raw) {
     };
     fetch(apiUrl, requestOptions)
          .then(response => response.text())
-         .then(result => accion(result))
-         .catch(error => console.log('error', error));
+         .then(result => accion(result,correo))
+         .catch(error => alert('Intente de nuevo'));
 }
-function accion(result){
+function accion(result,correo){
     const validez=document.createElement('h1');
     respuesta.innerHTML=``
     console.log('creandooooo')
@@ -112,7 +112,33 @@ function accion(result){
     `;
     respuesta.appendChild(validez)
     if(result==="Bienvenido"){
-        location.href = "http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/"
+      almacenarDatos(correo)
+        //location.href = "http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/"
 
     }
+}
+
+function almacenarDatos(correo){
+  if(typeof(Storage)!=="undefined"){
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+     // redirect: 'follow'
+ };
+ fetch("http://localhost:8082/api/producto/correo/"+correo, requestOptions)
+      .then(response => response.text())
+      .then(result => guardarDatosUsuario(result))
+      .catch(error => alert('Intente de nuevo '+error));
+    
+
+  }else{
+    console.log("no soporta web storage")
+  }
+
+  
+}
+function guardarDatosUsuario(id){
+  localStorage.setItem("id_usuario",id);
+  console.log('id almecnado '+id)
+  console.log('el ide que estaba guardado es '+localStorage.getItem("id_usuario"));
 }

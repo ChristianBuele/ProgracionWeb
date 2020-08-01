@@ -44,7 +44,10 @@ function verficar(){
         location.href = "http://localhost:81/pro/ProgracionWeb/ProyectoWeb/login.html"
     }
 }*/
-
+function onSignIn(googleUser) { //cuando inicia sesion con google
+    var profile = googleUser.getBasicProfile();
+    
+  }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
