@@ -5,9 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-signin-client_id" content="689122452455-us9hto3u0u1u8eacssrb7u0b1llhu9q1.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="689122452455-us9hto3u0u1u8eacssrb7u0b1llhu9q1.apps.googleusercontent.com">
 
-   
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -62,15 +63,14 @@
                                 Mi Cuenta
                             </button>
                             <div class="dropdown-menu dropdown-menu-right " style="background: rgba(0, 0, 0, 0.548);">
-                                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="login.html"><i
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="login.html"><i
                                         class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
-                                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="registro.html"><i
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="registro.html"><i
                                         class="fas fa-user-plus"></i> Resgistrarse</a>
-                                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="perfil.html"><i
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="perfil.html"><i
                                         class="fas fa-users-cog"></i> Configuración</a>
-                                <a class="dropdown-item disabled"  style="color: rgb(255, 255, 255)" href="#"><i
-                                        class="fas fa-times"></i> Cerrar Sesión</a>
-                                <!--va a-->
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="#"
+                                    onclick="signOut()"><i class="fas fa-times"></i> Cerrar Sesión</a>
 
                             </div>
                         </div>
@@ -79,8 +79,9 @@
                         </a>
                         <form class="form-inline mr-auto">
                             <div class="md-form my-0">
-                                <input id="busca" class="form-control" type="text" placeholder="Search" aria-label="Search">
-                                <ul id="busq" style="color: rgb(3, 143, 131);" >
+                                <input id="busca" class="form-control" type="text" placeholder="Search"
+                                    aria-label="Search">
+                                <ul id="busq" style="color: rgb(3, 143, 131);">
                             </div>
                         </form>
                 </ul>
@@ -95,51 +96,48 @@
                         <img class="avatar" src="img/logo2.jpg" alt="logoEmpresa"></a>
                 </div>
                 <div class="datos">
-                    <div class="formulariologin" >
+                    <div class="formulariologin">
                         <h1>! Bienvenido !</h1>
                         <form class="formulario" id="formularioLog">
                             <!-- datos-->
                             <label for="Usuario">Usuario</label>
-                            <input style="color: white;"  type="text" name="correo" placeholder="Ingrese el usuario">
+                            <input style="color: white;" type="text" name="correoUsuario"
+                                placeholder="Ingrese el usuario">
                             <label for="Usuario">Contraseña</label>
-                            <input style="color: white;" type="password" name="password" placeholder="Ingrese Contraseña">
-                            <button  class="fb btn iniciar" type="submit">
+                            <input style="color: white;" type="password" name="contraUsuario"
+                                placeholder="Ingrese Contraseña">
+                            <div class="verificacion" id="respuesta">
+                            </div>
+                            <button class="fb btn iniciar" type="submit">
                                 <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                             </button>
-                            
-                            <div class="verificacion" id="respuesta">
-                                <div class="alert alert-primary" role="alert" style="background: rgba(255, 255, 255, 0.137);color:white;">
-                                    Bienvenido               
-                             </div>
-                            </div>
-                            <label for="Usuario">------------------------------------------------</label>
-                            <h1 style="font-size: 16px;">Ingresar con Facebook</h1>
-                            <div class="fb-login-button" data-size="medium" data-button-type="continue_with"
-                                data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false"
-                                data-width="">
-                            </div>
-                            <h1 style="font-size: 16px;padding: 10px;">Ingresar con Google</h1>
-                            
-                            <div class="g-signin2" data-onsuccess="onSignIn" style="width: 100%; margin: auto; margin-left: 35%;"></div>
-                            <div class="userContent" style="display: none;"></div>
-                            <label for="Usuario">---------------Registrese--------------</label>
-                           
                         </form>
+
+                        <label for="Usuario">------------------------------------------------</label>
+                        <h1 style="font-size: 16px;">Ingresar con Facebook</h1>
+                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                        </fb:login-button>
+                        <h1 style="font-size: 16px;padding: 10px;">Ingresar con Google</h1>
+
+                        <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" data-theme="light"
+                            data-width="200"></div>
+                        <label for="Usuario">---------------Registrese--------------</label>
+
                     </div>
-                    <a  class="fb btn " href="registro.html" >
+                    <a class="fb btn " href="registro.html">
                         Registrarme
                     </a>
                     <br>
                     <br>
                     <br>
                 </div>
-                
-                
+
+
             </div>
         </div>
 
     </div>
-    
+
     <footer>
         <div class="contenedor">
             <!--rojooo-->
@@ -170,34 +168,27 @@
     </footer>
     <script src="js/buscador.js"></script>
     <!--<script src="js/login.js"></script></!-->
-    <script  src="js/loginGoogle.js"></script>
-    <script src="js/loginDatosPropios.js"></script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script src="js/loginServer.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-          <!--facenoooooooo-->
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '2899175583499642',
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v7.0'
-            });
-        };
-    </script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
 
-    </body>
+<!--facenoooooooo-->
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+</body>
 
 </html>

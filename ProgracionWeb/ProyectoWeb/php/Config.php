@@ -9,13 +9,13 @@ require_once 'vendor/autoload.php';
 $google_client = new Google_Client();
 
 //Set the OAuth 2.0 Client ID
-$google_client->setClientId('689122452455-us9hto3u0u1u8eacssrb7u0b1llhu9q1.apps.googleusercontent.com');
+$google_client->setClientId('1034286712318-kv0gapfqro1aijq84ed72r4aqqs8nan8.apps.googleusercontent.com');
 
 //Set the OAuth 2.0 Client Secret key
-$google_client->setClientSecret(  'GEsHs9cAL2bxK-yCsnjgA1Fj');
+$google_client->setClientSecret('Dzq5Xd3olizoZkKjk_SJCWQ1');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('');
+$google_client->setRedirectUri('http://localhost/tutorial/php-login-using-google-demo/index.php');
 
 //
 $google_client->addScope('email');

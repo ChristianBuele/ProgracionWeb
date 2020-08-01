@@ -20,20 +20,22 @@
 </head>
 
 <body class="bg-dark">
-     
-<div class="cabezera">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar sticky-top">
+
+  <div class="cabezera">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar sticky-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <div class="containerr">
-          <a class="navbar-brand" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">INFINITY PRODUCTIONS</a>
+          <a class="navbar-brand" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">INFINITY
+            PRODUCTIONS</a>
         </div>
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0 h5">
           <li class="nav-item active">
-            <a class="nav-link" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">Inicio <span
+                class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="productoFinal.html">Productos</a>
@@ -47,17 +49,21 @@
         </ul>
         <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item">
-            
-            <div class="btn-group" >
-              <button type="button" id="btn_cuenta" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Mi Cuenta
+
+            <div class="btn-group">
+              <button type="button" id="btn_cuenta" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Mi Cuenta
               </button>
               <div class="dropdown-menu dropdown-menu-right " style="background: rgba(0, 0, 0, 0.548);">
-                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="login.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
-                  <a class="dropdown-item"  style="color: rgb(255, 255, 255)"  href="registro.html"><i class="fas fa-user-plus"></i> Resgistrarse</a>
-                  <a class="dropdown-item"  style="color: rgb(255, 255, 255)"  href="perfil.html"><i class="fas fa-users-cog"></i> Configuración</a>
-                  <a class="dropdown-item disabled"  style="color: rgb(255, 255, 255)"  href="#"><i class="fas fa-times"></i> Cerrar Sesión</a><!--va a-->
-                 
+                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="login.html"><i
+                    class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="registro.html"><i
+                    class="fas fa-user-plus"></i> Resgistrarse</a>
+                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="perfil.html"><i
+                    class="fas fa-users-cog"></i> Configuración</a>
+                <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="#" onclick="signOut()"><i
+                    class="fas fa-times"></i> Cerrar Sesión</a>
               </div>
             </div>
             <a href="carrito.html" class="nav-link">
@@ -66,145 +72,72 @@
             <form class="form-inline mr-auto">
               <div class="md-form my-0">
                 <input id="busca" class="form-control" type="text" placeholder="Search" aria-label="Search">
-                <ul id="busq" style="color: rgb(3, 143, 131);" >
+                <ul id="busq" style="color: rgb(3, 143, 131);">
               </div>
             </form>
         </ul>
       </div>
     </nav>
-</div>
+  </div>
 
 
 
 
 
   <div class="jumbotron" style="background: #2d343f;">
-    <h1 class="font-weight-bold mb-4"><i class="fas fa-shopping-bag" ></i>
+    <h1 class="font-weight-bold mb-4"><i class="fas fa-shopping-bag"></i>
       Sesiones y Eventos</h1>
     <p class="q ">Aqui podras encontrar todos nuestros servicios, porfavor deja todo en nuestras manos</p>
   </div>
 
 
-  <div id="lista-cursos" class="bordes_tienda" >
-      <div align='center'>
-        <h2 class="font-weight-bold mb-4"> <i class="fas fa-camera"></i> Sesiones Personalizadas</h2>
-      </div>
-      <div >
-        <div class="card-deck mt-3">
-
-          <div class="card text-center border-info bg-dark">
-            <div class="card-body">
-              <h4 class="card-title">Sesión Basica</h4>
-              <p class="precio">$30  </p>
-
-              <img class="card-img-top" src="img/2020-02-15 17.50.51_1.jpg">
-
-              <p style="border:1;color: white;" class="card-text">Nuestro servico de sesión basica es para una persona, como resultado te vamos
-                a entregar el total de 5 fotos, Porfavor deja todo en nuestras manos y veras que no te arrepentiras de nuestros servicios. Tendras 
-                una sesión de fotos totalmente creativa y divertida. </p>
-              <a style="border-radius: 15px;"   class="btn btn-primary agregar-carrito" data-id="1"><i class="fas fa-cart-plus align-middles" ></i>Agregar al carrito</a>
-            </div>
-          </div>
-
-          <div class="card text-center border-info bg-dark">
-            <div class="card-body">
-              <h4 class="card-title">Sesión Standar</h4>
-              <p class="precio">$50  </p>
-              <img class="card-img-top" src="img/curso1.jpg">
-              <p style="border:1;color: white; ;"  class="card-text">Nuestro servico de sesión Estandar es indivudual o grupal, como resultado te vamos
-                a entregar el total de 20 fotos. Porfavor deja todo en nuestras manos y veras que no te arrepentiras de nuestros servicios. Tendras 
-                una sesión de fotos totalmente creativa y divertida. </p>
-              <a style="border-radius: 15px;" href="#" class="btn btn-primary agregar-carrito" data-id="2" ><i class="fas fa-cart-plus" ></i>Agregar al carrito</a>
-            </div>
-          </div>
-       <div class="card text-center border-info bg-dark">
-            <div class="card-body">
-              <h4 class="card-title">Sesión Profesional</h4>
-              <p class="precio">$80  </p>
-              <img class="card-img-top" src="img/rt.jpg">
-              <p style="border:1;color: white;" class="card-text">Nuestro servico de sesión Profesional es indivudual o grupal, como resultado te vamos
-                a entregar el total de 10 fotos. Porfavor deja todo en nuestras manos y veras que no te arrepentiras de nuestros servicios. Tendras 
-                una sesión de fotos totalmente creativa y divertida. </p>
-              <a style="border-radius: 15px;"  href="#" class="btn btn-primary agregar-carrito" data-id="3" ><i class="fas fa-cart-plus"></i>Agregar al carrito</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div align='center'>
-        <br>
-        <h2 class="font-weight-bold mb-4" ><i class="fas fa-video"></i> Bodas, Bautizos, 15 años</h2>
-      </div>
-      <div>
-        <div class="card-deck mt-3">
-          <div class="card text-center border-info bg-dark">
-            <div class="card-body">
-              <h4 class="card-title">Evento Basico</h4>
-              <p class="precio">$100  </p>
-              <img class="card-img-top" src="img/MIG_1980.jpg">
-              <p style="border:1;color: white;" class="card-text">Nuestro producto de Evento Basico incluye el acompañamiento a la recepción de tu evento,
-                como resultado te vamos a entregar el total de 20 fotos. Porfavor deja todo en nuestras manos y veras que no te arrepentiras de nuestros servicios. 
-                Tendras cubierto todos los momentos de tu evento social de una manera muy profesional. </p>
-              <a style="border-radius: 15px;" href="#" class="btn btn-primary agregar-carrito" data-id="4"><i class="fas fa-cart-plus"></i>Agregar al carrito</a>
-            </div>
-          </div>
-
-          <div class="card text-center border-info bg-dark">
-            <div class="card-body">
-              <h4 class="card-title">Evento Estandar</h4>
-              <p class="precio">$150  </p>
-              <img class="card-img-top" src="img/curso4.jpg">
-              <p style="border:1;color: white; text-align: justify;" class="card-text">Nuestro producto de Evento Estandar incluye el acompañamiento a la recepción de tu evento, una pequeña
-                sesion y como resultado te vamos a entregar el total de 35 fotos. Porfavor deja todo en nuestras manos y veras que no te arrepentiras de nuestros servicios. 
-                Tendras cubierto todos los momentos de tu evento social de una manera muy profesional. </p>
-              <a style="border-radius: 15px;"  href="#" class="btn btn-primary agregar-carrito" data-id="5"><i class="fas fa-cart-plus"></i>Agregar al carrito</a>
-            </div>
-          </div>
-
-          <div class="card text-center border-info bg-dark">
-            <div class="card-body">
-              <h4 class="card-title">Evento Profesional</h4>
-              <p class="precio">$200  </p>
-              <img class="card-img-top" src="img/a.jpg" onmouseover="this.width=500,this.heigth=400"
-                onmouseout="this.width=200,this.heigth=150">
-              <p style="border:1;color: white;" class="card-text">Nuestro producto de Evento Profesional incluye el acompañamiento a la recepción de tu evento, una sesion 
-                completa y como resultado te vamos a entregar el total de 50 fotos. Porfavor deja todo en nuestras manos y veras que no te arrepentiras de nuestros servicios. 
-                Tendras cubierto todos los momentos de tu evento social de una manera muy profesional. </p>
-              <a style="border-radius: 15px;" style="border-radius: 15px;"  href="#" class="btn btn-primary agregar-carrito" data-id="6"><i class="fas fa-cart-plus"></i>Agregar al carrito</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-  </div>
-<br>
-  <footer >
-    <div class="contenedor"><!--rojooo-->
-        <div class="logo">
-            <a href="index.html">
-                <img class="img" src="img/logo2.jpg" alt=""></a>
-                <div class="icons">
-                    <a class="iconslogos" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a class="iconslogos" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a class="iconslogos" href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></a>
-                    <a class="iconslogos" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                </div>
-        </div>
-        <div class="contenedorinfo">
-            <h1 style="size: 40px;">CONECTEMONOS</h1>
-            <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">Infinity Productions | Fotografia</p>
-            <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">infinityproductions@gmail.com</p>
-        </div>
-        <div class="condiciones">
-            <a href="#">Términos y Condiciones</a>
-            <a href="#">Políticas de Privacidad</a>
-            <a href="#">Políticas de Entrega</a>
-            <a href="#">Políticas de Reembolso</a>
-        </div>
+  <div id="lista-cursos" class="bordes_tienda">
+    <div id="titulo">
+      <h2 class="font-weight-bold mb-4"> <i class="fas fa-camera"></i> Sesiones Personalizadas</h2>
     </div>
-</footer>
-<script src="js/carrito.js"></script>
-<script src="js/buscador.js"></script>
+    <div>
+      <div class="card-deck mt-3" id="contenedor0">
+
+      </div>
+      <div class="card-deck mt-3" id="contenedor1">
+
+      </div>
+    </div>
+
+
+  </div>
+  <br>
+  <footer>
+    <div class="contenedor">
+      <!--rojooo-->
+      <div class="logo">
+        <a href="index.html">
+          <img class="img" src="img/logo2.jpg" alt=""></a>
+        <div class="icons">
+          <a class="iconslogos" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a class="iconslogos" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a class="iconslogos" href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></a>
+          <a class="iconslogos" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="contenedorinfo">
+        <h1 style="size: 40px;">CONECTEMONOS</h1>
+        <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">Infinity Productions |
+          Fotografia</p>
+        <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">
+          infinityproductions@gmail.com</p>
+      </div>
+      <div class="condiciones">
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Políticas de Privacidad</a>
+        <a href="#">Políticas de Entrega</a>
+        <a href="#">Políticas de Reembolso</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/carrito.js"></script>
+  <script src="js/buscador.js"></script>
+  <script src="js/cargarImagen.js"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

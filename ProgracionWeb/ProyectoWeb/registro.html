@@ -1,154 +1,208 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/adab6b318b.js" crossorigin="anonymous"></script>
-    <link href="css/estiloPerfil.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/contacto.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="google-signin-client_id"
+    content="689122452455-us9hto3u0u1u8eacssrb7u0b1llhu9q1.apps.googleusercontent.com">
 
 
-    <title>Registro</title>
-  </head>
-  <body>
-    <div class="cabezera">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar sticky-top">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <div class="containerr">
-              <a class="navbar-brand" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">INFINITY PRODUCTIONS</a>
-            </div>
-            <ul class="navbar-nav mx-auto mt-2 mt-lg-0 h5">
-              <li class="nav-item active">
-                <a class="nav-link" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">Inicio <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="productoFinal.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tienda.html">Tienda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="acercaNosotros.html">Acerca de Nosotros</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav nav-flex-icons">
-              <li class="nav-item">
-                
-                <div class="btn-group" >
-                  <button type="button" id="btn_cuenta" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Mi Cuenta
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right " style="background: rgba(0, 0, 0, 0.548);">
-                    <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="login.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
-                      <a class="dropdown-item" style="color: rgb(255, 255, 255);"  href="registro.html"><i class="fas fa-user-plus"></i> Resgistrarse</a>
-                      <a class="dropdown-item" style="color: rgb(255, 255, 255);"  href="perfil.html"><i class="fas fa-users-cog"></i> Configuración</a>
-                      <a class="dropdown-item disabled" style="color: rgb(255, 255, 255);"  href="#"><i class="fas fa-times"></i> Cerrar Sesión</a><!--va a-->
-                     
-                  </div>
-                </div>
-                <a href="https://www.facebook.com" class="nav-link">
-                  <i class="fas fa-cart-plus">Carrito</i>
-                </a>
-                <form class="form-inline mr-auto">
-                  <div class="md-form my-0">
-                    <input id="busca" class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    <ul id="busq" style="color: rgb(3, 143, 131);" >
-                    <ul>
-                  </div>
-                </form>
-            </ul>
-          </div>
-        </nav>
-  </div>
-    <section >
-        <div class="row no-gutters " id="lista_botones_registro" style="background: #15181f;">
-            <div class="col-xl-7 col-lg-12 d-flex">
-                <div class="container align-self-center p-6 ">
-                    <h1 class="font-weight-bold mb-4" style="text-align: center;">Registro</h1>
-                    <div class="form-group btn_contorno" style="text-align: center;">
-                        <button style="border-radius: 30%; " class="btn btn-dark text-light mr-2 mb-3"> <i class="fab fa-google lead align-middle mr-2"></i>Google</button>
-                        <button style="border-radius: 30%; " class="btn btn-dark text-light mr-2 mb-3"><i class="fab fa-facebook lead align-middle mr-2"></i>Facebook</button>
-                    </div>
-                    <p class="text-muted mb-5">¡Bienvenido!.</p>
-                    <form action="">
-                        <div class="form-row mb-2">
-                            <div class="form-group col-md-6">
-                                <label class="font-weigth-bold">Nombre <span class="text-danger">*</span></label>
-                                <input id="nombre" type="text" class="form-control" placeholder="Tu nombre" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label class="font-weigth-bold">Apellido <span class="text-danger">*</span></label>
-                                <input id="apellido" type="text" class="form-control" placeholder="Tu apellido" required>
-                            </div>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label class="font-weigth-bold">Correo electrónico<span class="text-danger">*</span></label>
-                            <input id="email" type="email" class="form-control" placeholder="Ingresa tu correo Electronico" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label class="font-weigth-bold">Contraseña<span class="text-danger">*</span></label>
-                            <input id="contra" type="password" class="form-control" placeholder="Ingresa una contraseña" required>
-                        </div>
-                        <div class="form-group mb-5">
-                            <div class="form-check">
-                                <input id= "condi" required class="form-check-input" type="checkbox">
-                                <label class="form-check-label">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y los términos y condiciones</label>
-                            </div>
-                        </div>
-                        <a id="btn_registro" class="btn btn-primary registrar_registro" ialign='center'>Registrate</a>
-                    </form>
-                    <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | 2020 Infinity Productions</small>
-                </div>
-            </div>
-            <div class="col-xl-5 col-lg-12 register-bg">
-                <div class="position-absolute testiomonial p-4">
-                    <h3 class="font-weight-bold text-light">La felicidad es una dirección, no un lugar.</h3>
-                    <p class="lead text-light"> Vivimos en un arcoíris de caos.</p>
-                </div>
-            </div>   
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/adab6b318b.js" crossorigin="anonymous"></script>
+  <link href="css/estiloPerfil.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/contacto.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+
+
+  <title>Registro</title>
+</head>
+
+<body>
+  <div class="cabezera">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar sticky-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <div class="containerr">
+          <a class="navbar-brand" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">INFINITY
+            PRODUCTIONS</a>
         </div>
-    </section>
-    <footer>
-      <div class="contenedor"><!--rojooo-->
-          <div class="logo">
-              <a href="index.html">
-                  <img class="img" src="img/logo2.jpg" alt=""></a>
-                  <div class="icons">
-                      <a class="iconslogos" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                      <a class="iconslogos" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                      <a class="iconslogos" href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></a>
-                      <a class="iconslogos" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                  </div>
-          </div>
-          <div class="contenedorinfo">
-              <h1 style="size: 40px;">CONECTEMONOS</h1>
-              <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">Infinity Productions | Fotografia</p>
-              <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">infinityproductions@gmail.com</p>
-          </div>
-          <div class="condiciones">
-              <a href="#">Términos y Condiciones</a>
-              <a href="#">Políticas de Privacidad</a>
-              <a href="#">Políticas de Entrega</a>
-              <a href="#">Políticas de Reembolso</a>
-          </div>
+        <ul class="navbar-nav mx-auto mt-2 mt-lg-0 h5">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/">Inicio <span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productoFinal.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tienda.html">Tienda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="acercaNosotros.html">Acerca de Nosotros</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+
+            <div class="btn-group">
+              <button type="button" id="btn_cuenta" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Mi Cuenta
+              </button>
+              <div class="dropdown-menu dropdown-menu-right " style="background: rgba(0, 0, 0, 0.548);">
+                <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="login.html"><i
+                    class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+                <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="registro.html"><i
+                    class="fas fa-user-plus"></i> Resgistrarse</a>
+                <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="perfil.html"><i
+                    class="fas fa-users-cog"></i> Configuración</a>
+                <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="#" onclick="signOut()"><i
+                    class="fas fa-times"></i> Cerrar Sesión</a>
+
+                <!--va a-->
+
+              </div>
+            </div>
+            <a href="https://www.facebook.com" class="nav-link">
+              <i class="fas fa-cart-plus">Carrito</i>
+            </a>
+            <form class="form-inline mr-auto">
+              <div class="md-form my-0">
+                <input id="busca" class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <ul id="busq" style="color: rgb(3, 143, 131);">
+                  <ul>
+              </div>
+            </form>
+        </ul>
       </div>
+    </nav>
+  </div>
+  <section>
+    <div class="row no-gutters " id="lista_botones_registro" style="background: #15181f;">
+      <div class="col-xl-7 col-lg-12 d-flex">
+        <div class="container align-self-center p-6 ">
+          <h1 class="font-weight-bold mb-4" style="text-align: center;">Registro</h1>
+
+          <p class="text-muted mb-5">¡Bienvenido!.</p>
+          <form id="formularioReg">
+            <div class="form-row mb-2">
+              <div class="form-group col-md-6">
+                <label class="font-weigth-bold">Nombre <span class="text-danger">*</span></label>
+                <input id="nombre" name="nombreUsuario" type="text" class="form-control" placeholder="Tu nombre"
+                  required>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="font-weigth-bold">Apellido <span class="text-danger">*</span></label>
+                <input id="apellido" name="apellidoUsuario" type="text" class="form-control" placeholder="Tu apellido"
+                  required>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label class="font-weigth-bold">Correo electrónico<span class="text-danger">*</span></label>
+              <input id="email" value="jaja" type="email" name="correoUsuario" class="form-control"
+                placeholder="Ingresa tu correo Electronico" required>
+            </div>
+            <div class="form-group mb-3">
+              <label class="font-weigth-bold">Contraseña<span class="text-danger">*</span></label>
+              <input id="contra" type="password" name="contraUsuario" class="form-control"
+                placeholder="Ingresa una contraseña"  required>
+            </div>
+            <div class="form-group mb-5">
+              <div class="form-check">
+                <input id="condi" required class="form-check-input" type="checkbox">
+                <label class="form-check-label">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y los
+                  términos y condiciones</label>
+              </div>
+            </div>
+            <a id="btn_registro" class="btn btn-primary registrar_registro" ialign='center'>Registrate</a>
+          </form>
+          <div class="form-group btn_contorno" style="text-align: center;">
+            <h1 style="font-size: 16px;padding: 10px;">Registrar con Facebook</h1>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
+            <div id="status">
+            </div>
+            <h1 style="font-size: 16px;padding: 10px;">Registrar con Google</h1>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" data-theme="light"  data-width="200" ></div>
+          </div>
+          </div>
+        </div>
+        <div class="verificacion" id="respuesta">
+
+        </div>
+        <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | 2020 Infinity Productions</small>
+      </div>
+    </div>
+    <div class="col-xl-5 col-lg-12 register-bg">
+      <div class="position-absolute testiomonial p-4">
+        <h3 class="font-weight-bold text-light">La felicidad es una dirección, no un lugar.</h3>
+        <p class="lead text-light"> Vivimos en un arcoíris de caos.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer>
+    <div class="contenedor">
+      <!--rojooo-->
+      <div class="logo">
+        <a href="index.html">
+          <img class="img" src="img/logo2.jpg" alt=""></a>
+        <div class="icons">
+          <a class="iconslogos" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a class="iconslogos" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a class="iconslogos" href="https://twitter.com/login?lang=es"><i class="fab fa-twitter"></i></a>
+          <a class="iconslogos" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="contenedorinfo">
+        <h1 style="size: 40px;">CONECTEMONOS</h1>
+        <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">Infinity Productions |
+          Fotografia</p>
+        <p style="color: aliceblue;font-size: 15px;font-family: sans-serif;text-align: center;">
+          infinityproductions@gmail.com</p>
+      </div>
+      <div class="condiciones">
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Políticas de Privacidad</a>
+        <a href="#">Políticas de Entrega</a>
+        <a href="#">Políticas de Reembolso</a>
+      </div>
+    </div>
   </footer>
   <script src="js/buscador.js"></script>
   <script src="js/validarRegistro.js"></script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '2899175583499642',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v7.0'
+      });
+    };
+  </script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

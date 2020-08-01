@@ -35,3 +35,23 @@ const filtrar =()=>{
     }
 }
 formulario.addEventListener('keyup',filtrar);
+/*
+verficar();
+function verficar(){
+    if(GoogleAuth.isSignedIn.get ()){
+        console.log('esta logrado')
+    }else{
+        location.href = "http://localhost:81/pro/ProgracionWeb/ProyectoWeb/login.html"
+    }
+}*/
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+    
+    FB.logout(function(response) {
+        console.log('Log Out Facebook')
+      });
+  }

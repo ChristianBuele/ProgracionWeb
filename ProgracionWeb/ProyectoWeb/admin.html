@@ -60,15 +60,14 @@
                                 Mi Cuenta
                             </button>
                             <div class="dropdown-menu dropdown-menu-right " style="background: rgba(0, 0, 0, 0.548);">
-                                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="login.html"><i
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="login.html"><i
                                         class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
-                                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="registro.html"><i
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="registro.html"><i
                                         class="fas fa-user-plus"></i> Resgistrarse</a>
-                                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="perfil.html"><i
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255)" href="perfil.html"><i
                                         class="fas fa-users-cog"></i> Configuración</a>
-                                <a class="dropdown-item"  style="color: rgb(255, 255, 255)" href="#"><i
-                                        class="fas fa-times"></i> Cerrar Sesión</a>
-
+                                <a class="dropdown-item" style="color: rgb(255, 255, 255);" href="#"
+                                    onclick="signOut()"><i class="fas fa-times"></i> Cerrar Sesión</a>
                             </div>
                         </div>
                         <a href="carrito.html" class="nav-link">
@@ -76,8 +75,9 @@
                         </a>
                         <form class="form-inline mr-auto">
                             <div class="md-form my-0">
-                                <input id="busca" class="form-control" type="text" placeholder="Search" aria-label="Search">
-                                <ul id="busq" style="color: rgb(3, 143, 131);" >
+                                <input id="busca" class="form-control" type="text" placeholder="Search"
+                                    aria-label="Search">
+                                <ul id="busq" style="color: rgb(3, 143, 131);">
                             </div>
                         </form>
                 </ul>
@@ -181,32 +181,34 @@
             <br>
             <h1><i class="fas fa-plus"></i> AÑADIR PRODUCTOS </h1>
             <div class="datosProductos">
-                <form>
-                    <div class="form-group">
-                        <label>Nombre Producto</label>
-                        <input type="text" id="nombreProducto" class="form-control mx-sm-3 "
-                            aria-describedby="passwordHelpInline" required minlength="5">
-                    </div>
-                    <div class="form-group">
-                        <label>Precio Producto</label>
-                        <input type="number" min="0" id="precioProducto" class="form-control mx-sm-3 "
-                            aria-describedby="passwordHelpInline" required>
-                    </div>
+                <form id="fileUploadForm" name="uploadFiles" action="http://localhost:8082/api/producto/uploadFiles"
+                    method="POST" enctype="multipart/form-data">
+
                     <div class="form-group">
                         <label>Imagen</label>
-                        <input type="file"  id="ImagenProducto" class="form-control mx-sm-3 "
+                        <input type="file" name="imagenProducto" class="form-control mx-sm-3 " name="files"
+                            aria-describedby="passwordHelpInline" required>
+
+
+                        <label>Nombre Producto</label>
+                        <input type="text" name="nombreProducto" class="form-control mx-sm-3 "
                             aria-describedby="passwordHelpInline" required minlength="5">
+                       
+                            <label>Categoria Producto</label>
+                        <input type="text" name="categoriaProducto" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="5">
+                        <label>Precio Producto</label>
+                        <input type="number" min="0" name="precioProducto" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required>
                     </div>
 
                     <div class="form-group green-border-focus">
                         <label for="exampleFormControlTextarea5" style="color: white;">Descripción</label>
-                        <textarea id="desProducto" class="form-control" id="exampleFormControlTextarea5" rows="3"
+                        <textarea name="desProducto" class="form-control" id="exampleFormControlTextarea5" rows="3"
                             required minlength="15"></textarea>
                     </div>
-
                     <button type="submit" id="addproducto" class="btn btn-sm btn-rounded btn-sm my-0 "><i
-                            class="far fa-save"></i> Agregar
-                        Producto</button>
+                            class="far fa-save"></i>Guardar</button>
                 </form>
             </div>
 
@@ -282,8 +284,8 @@
 
                     <div class="form-group green-border-focus">
                         <label for="exampleFormControlTextarea5" style="color: white;">Descripción</label>
-                        <textarea id="desCombo" class="form-control" id="exampleFormControlTextarea5" rows="3"
-                            required minlength="15"></textarea>
+                        <textarea id="desCombo" class="form-control" id="exampleFormControlTextarea5" rows="3" required
+                            minlength="15"></textarea>
                     </div>
 
                     <button type="submit" id="addCombo" class="btn btn-sm btn-rounded btn-sm my-0 "><i
@@ -350,7 +352,7 @@
                     </div>
                     <div class="form-group">
                         <label>Apellidos</label>
-                        <input type="text"  id="apellidoUsuario" class="form-control mx-sm-3 "
+                        <input type="text" id="apellidoUsuario" class="form-control mx-sm-3 "
                             aria-describedby="passwordHelpInline" required>
                     </div>
                     <div class="form-group">
@@ -363,10 +365,10 @@
                         <input type="password" min="0" id="passUsuario" class="form-control mx-sm-3 "
                             aria-describedby="passwordHelpInline" required>
                     </div>
-                   
-                   
 
-                   
+
+
+
 
                     <button type="submit" id="addUsuario" class="btn btn-sm btn-rounded btn-sm my-0 "><i
                             class="far fa-save"></i> Agregar
@@ -408,9 +410,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/buscador.js"></script>
     <script src="js/administracion.js"></script>
-    <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
