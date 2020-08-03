@@ -29,64 +29,52 @@ function response(e) {
  
  `*/
 var datos;
-var respuesta = document.getElementById('respuesta');
 var contador=0;
+var aux=0;
+console.log('cargando datos de presets')
 fetch("http://localhost:8082/api/producto/cargarProductos/")
   .then(resp => resp.json())
   .then(function (data) {
     procesamiento(data)
   })
-  .catch(function () {
-    alert('error')
+  .catch(function (error) {
+    alert('error'+error.message)
   });
-var obj
+
+
 function procesamiento(json) {
   datos=json;
   console.log(json)
   for (var i = 0; i < json.length; i++) {
-    obj = json[i];
-    console.log(obj.precio)
-    const id_imagen = obj.imagen;
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:8082/api/producto/nombre/" + id_imagen);
-    xhr.responseType = "blob";
-    xhr.onload = response;
-    xhr.send();
-  }
-}
-function response(e) {
-  var urlCreator = window.URL || window.webkitURL;
-  var imageUrl = urlCreator.createObjectURL(this.response);
-  cargarFotos(imageUrl)
-}
-var aux=0;
-function cargarFotos(imageUrl) {
-  // document.querySelector("#image").src = imageUrl;
-
- 
-  console.log(obj)
-  if(contador===3){
-    aux++;
-  }
-  document.getElementById("contenedor"+aux).innerHTML += `
-<div class="card text-center border-info bg-dark">
-            <div class="card-body">
-              <h4 class="card-title">${datos[contador].nombre}</h4>
-              <p class="precio">${datos[contador].precio}  </p>
-
-              <img class="card-img-top" src=${imageUrl} >
-
-              <p style="border:1;color: white;" class="card-text">${datos[contador].descripcion} </p>
-              <a style="border-radius: 15px;"   class="btn btn-primary agregar-carrito" data-id="1"><i class="fas fa-cart-plus align-middles" ></i>Agregar al carrito</a>
+    
+    var obj = json[i];
+    if(i===3){
+      aux++;
+    }
+    document.getElementById("contenedor"+aux).innerHTML += `
+  <div class="card text-center border-info bg-dark">
+              <div class="card-body">
+                <h4 class="card-title">${datos[i].nombre}</h4>
+                <p class="precio">${datos[i].precio}  </p>
+                <div id="contenedorImagen">
+                <img class="card-img-top" id="img${i}" src="" >
+                </div>
+                
+  
+                <p style="border:1;color: white;" class="card-text">${datos[i].descripcion} </p>
+                <a style="border-radius: 15px;"   class="btn btn-primary agregar-carrito" data-id="1"><i class="fas fa-cart-plus align-middles" ></i>Agregar al carrito</a>
+              </div>
             </div>
-          </div>
-`;
-contador++;
-  /*document.getElementById("body").innerHTML += `
-  <tr>
-        <td> <img src=${imageUrl} width="100" height="100"></td>
-        <td>Body 2</td>
-  </tr>
-  `;*/
-
+  `;
+ // document.getElementById("img"+i).src='data:image/jpeg;base64,'+json[i].imagen
+  document.getElementById('img'+i).setAttribute('src', 'data:image/jpeg;base64,'+json[i].imagen);
 }
+  
+  
+}
+
+
+
+
+
+

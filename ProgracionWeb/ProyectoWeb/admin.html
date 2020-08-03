@@ -181,8 +181,9 @@
             <br>
             <h1><i class="fas fa-plus"></i> AÑADIR PRODUCTOS </h1>
             <div class="datosProductos">
-                <form id="fileUploadForm" name="uploadFiles" action="http://localhost:8082/api/producto/uploadFiles"
-                    method="POST" enctype="multipart/form-data">
+                <form id="fileUploadForm" name="uploadFiles" target="_blank"
+                    action="http://localhost:8082/api/producto/uploadFiles" method="POST"
+                    enctype="multipart/form-data">
 
                     <div class="form-group">
                         <label>Imagen</label>
@@ -193,8 +194,8 @@
                         <label>Nombre Producto</label>
                         <input type="text" name="nombreProducto" class="form-control mx-sm-3 "
                             aria-describedby="passwordHelpInline" required minlength="5">
-                       
-                            <label>Categoria Producto</label>
+
+                        <label>Categoria Producto</label>
                         <input type="text" name="categoriaProducto" class="form-control mx-sm-3 "
                             aria-describedby="passwordHelpInline" required minlength="5">
                         <label>Precio Producto</label>
@@ -377,6 +378,50 @@
 
             </div>
             <br>
+            <br>
+            <h1><i class="fas fa-user-plus"></i> AÑADIR PRESET</h1>
+            <div class="container" id="addPresets">
+
+                <form id="fileUploadForm1" target="_blank" action="http://localhost:8082/api/producto/preset/" method="POST" 
+                enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Nombre Preset</label>
+                        <input type="text" name="nombrePreset" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required minlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label>Imagen Muestra</label>
+                        <input type="file" name="imagenPreset" class="form-control mx-sm-3 " name="files"
+                            aria-describedby="passwordHelpInline" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripcion Preset</label>
+                        <textarea name="descripcionPreset" class="form-control" id="exampleFormControlTextarea5"
+                            rows="3" required minlength="15"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Preset</label>
+                        <input type="file" name="preset" class="form-control mx-sm-3 " name="files"
+                            aria-describedby="passwordHelpInline" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria Preset</label>
+                        
+                            <input type="text" name="categoriaPreset" class="form-control mx-sm-3 " name="files"
+                            aria-describedby="passwordHelpInline" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Precio Preset</label>
+                        <input type="number" min="0" name="precioProducto" class="form-control mx-sm-3 "
+                            aria-describedby="passwordHelpInline" required>
+                    </div>
+                    <button type="submit" id="addUsuario" class="btn btn-sm btn-rounded btn-sm my-0 "><i
+                            class="far fa-save"></i> Agregar
+                        Preset</button>
+                </form>
+
+            </div>
+            <br>
 
         </div>
 
@@ -413,6 +458,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/buscador.js"></script>
     <script src="js/administracion.js"></script>
+    <script src="js/validaciones.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
