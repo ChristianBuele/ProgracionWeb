@@ -32,7 +32,7 @@ var datos;
 var contador=0;
 var aux=0;
 console.log('cargando datos de presets')
-fetch("https://servidorinfinity.herokuapp.com/api/producto/cargarProductos/")
+fetch("http://localhost:8082/api/producto/cargarProductos/")
   .then(resp => resp.json())
   .then(function (data) {
     procesamiento(data)
