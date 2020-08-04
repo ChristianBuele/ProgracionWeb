@@ -1,6 +1,6 @@
 var formularios = document.getElementById('formularioLog');
 var respuesta = document.getElementById('respuesta');
-var apiUrl = "http://localhost:8082/api/producto/login/";
+var apiUrl = "https://servidorinfinity.herokuapp.com/api/producto/login/";
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 console.log('jaajjaaj')
@@ -125,7 +125,7 @@ function almacenarDatos(correo) {
       headers: myHeaders,
       // redirect: 'follow'
     };
-    fetch("http://localhost:8082/api/producto/correo/" + correo, requestOptions)
+    fetch("https://servidorinfinity.herokuapp.com/api/producto/correo/" + correo, requestOptions)
       .then(response => response.text())
       .then(result => guardarDatosUsuario(result))
       .catch(error => alert('Intente de nuevo ' + error));
