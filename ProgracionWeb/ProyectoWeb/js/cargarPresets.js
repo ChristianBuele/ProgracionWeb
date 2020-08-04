@@ -60,7 +60,7 @@ function procesamiento(json) {
       `;
       }
 
-      document.getElementById('presetPremiumId' + i).setAttribute('src', 'data:image/jpeg;base64,' + json[i].bytesImagen);
+      document.getElementById('presetPremiumId' + i).setAttribute('src', 'data:image/jpeg;base64,'+json[i].bytesImagen);
     }
   }
 console.log("Termina de cargar")
