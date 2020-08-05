@@ -31,7 +31,7 @@ function vaciarCarrito() {
         .catch(error => console.log('error', error));
 }
 function refrescar(){
-    location.href="http://localhost:82/fronendWeb/ProgracionWeb/ProgracionWeb/ProyectoWeb/carrito.html";
+   location.href="http://localhost:82/fronendWeb/ProgracionWeb/ProgracionWeb/ProyectoWeb/carrito.html";
     
 }
 function vaciarLocalStorage() {
@@ -112,10 +112,11 @@ function actualizarrecio(precio){
     if(precio==='false'){
 
     }else{
+        var nuevoprecio=operar(precio);
         const dato = document.createElement('h2');
-        dato.innerHTML = `<h2>${precio}</h2>`;
+        dato.innerHTML = `<h2>${nuevoprecio}</h2>`;
         precioFinal.appendChild(dato);
-        localStorage.setItem("valorFactura",precio);
+        localStorage.setItem("valorFactura",nuevoprecio);
     }
 }
 
@@ -145,3 +146,16 @@ function procesamiento(json) {
         precioFinal.appendChild(dato);
         localStorage.setItem("valorFactura",suma);
     }
+function operar(precio){
+    var a=0
+    try{
+        a=precio*1+34;
+        if(a>0){
+            return precio;    
+        }
+        console.log(a);
+        return 0;
+    }catch (error){
+        return 0;
+    }
+}
