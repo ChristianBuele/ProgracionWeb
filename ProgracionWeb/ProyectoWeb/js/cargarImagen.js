@@ -32,7 +32,7 @@ var datos;
 var contador=0;
 var aux=0;
 console.log('cargando datos de presets')
-fetch("https://servidorinfinity.herokuapp.com/api/producto/cargarProductos/")
+fetch("http://localhost:8082/api/producto/cargarProductos/")
   .then(resp => resp.json())
   .then(function (data) {
     procesamiento(data)
@@ -59,8 +59,6 @@ function procesamiento(json) {
                 <div id="contenedorImagen">
                 <img class="card-img-top" id="img${i}" src="" >
                 </div>
-                
-  
                 <p style="border:1;color: white;" class="card-text">${datos[i].descripcion} </p>
                 <a style="border-radius: 15px;"   class="btn btn-primary agregar-carrito" data-id="${datos[i].id_producto}"><i class="fas fa-cart-plus align-middles" ></i>Agregar al carrito</a>
               </div>
