@@ -182,6 +182,10 @@ document.getElementById('fechaActual').addEventListener('change', function () {
 })
 function pagar(valorAPagar) {
     console.log("se va a pagar "+valorAPagar)
+    var fiesta=markerFiesta.getPosition().toString();
+    var entrega=markerEntrega.getPosition().toString();
+    console.log(fiesta+" "+entrega)
+    var id_usuario=localStorage.getItem("id_usuario");
     var raw = JSON.stringify({
         "id_tarjeta": tarjeta,
         "precio_final": valorAPagar,
@@ -189,9 +193,9 @@ function pagar(valorAPagar) {
         "id_factura": '0',
         "fecha_venta": fecha_actual,
         "fecha_evento": fechaEvento,
-        "direccion_evento": markerFiesta,
-        "direccion_Entrega": markerEntrega,
-        "id_usuario": localStorage.getItem("id_usuario")
+        "direccion_evento": fiesta,
+        "direccion_Entrega": entrega,
+        "id_usuario": id_usuario
     });
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -211,7 +215,7 @@ function confiPago(band) {
     if (band === "true") {
         console.log('Pago Exitoso')
         alert('Gracias por su compra. La factura fue enviada a su correo');
-
+        location.href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/"
     } else {
         alert('No se ha podido realizar el pago ' + band);
     }

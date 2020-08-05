@@ -91,12 +91,10 @@
         <h2 style="text-align: center;padding: 9px;color:white;font-size: 5vw;"><i class="fas fa-crown"></i> PREMUIM
         </h2>
       </div>
-      <div class="carrusel">
+      <div class="carrusel" id="listaPresets">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <ol class="carousel-indicators" id="itemsPremium">
+            
           </ol>
           <div class="carousel-inner" id="contenidoPresetsPremium">
             
@@ -105,7 +103,7 @@
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <a  class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
@@ -114,18 +112,15 @@
           El uso de este producto está limitado a la persona que adquiere el mismo, está prohibido distribuirlo o
           revenderlo.
         </p>
-        <button type="button" class="btn btn-sm btn-rounded btn-sm my-0 " style="color: white;"><i class="fas fa-cart-plus"></i> Añadir al Carrito</button>
-
+        
       </div>
       <div class="tipog">
         <br>
         <h1 style="color: white; text-align: center;font-size: 5vw;"><i class="far fa-smile-wink"></i> FREE</h1>
       </div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <ol class="carousel-indicators" id="itemsFree">
+         
         </ol>
         <div class="carousel-inner" id="contenidoPresetsFree">
           
@@ -142,9 +137,7 @@
       <p style="color: white;">
         Puede ser utilizado por las personas que control
       </p>
-      <button type="button" class="btn btn-sm btn-rounded btn-sm my-0 " style="color: white;"><i class="fas fa-cart-plus"></i> Añadir al Carrito</button>
-
-
+      
       <!--books-->
       <br>
       <br>
@@ -219,6 +212,7 @@
   </footer>
   <script src="js/buscador.js"></script>
   <script src="js/cargarPresets.js"></script>
+  <script src="js/comprarPresets.js"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

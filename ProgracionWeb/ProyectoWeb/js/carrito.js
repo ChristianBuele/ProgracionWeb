@@ -32,7 +32,7 @@ function comprarCurso(e) {
         console.log(curso);
         ///hago la toma de datos del curso
         id = leerDatosCurso(curso);
-        agrgegarCarritoProductoBase(id_us,id,fecha_actual);
+        agrgegarCarritoProductoBase(id_us,id,fecha_actual);//id del usuario y el ide del del producto en la tarjeta
     }
     console.log("el ide del producto es: ");
     console.log(id);
