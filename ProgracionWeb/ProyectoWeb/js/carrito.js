@@ -5,8 +5,6 @@ const cursos = document.getElementById('lista-cursos');
 var f = new Date();
 var fecha_actual = (f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());
 var id_us = localStorage.getItem("id_usuario");
-console.log("ide del usuarios es")
-console.log(id_us)
 cargarEventListeners();
 //listener
 
@@ -32,10 +30,12 @@ function comprarCurso(e) {
         console.log(curso);
         ///hago la toma de datos del curso
         id = leerDatosCurso(curso);
-        agrgegarCarritoProductoBase(id_us,id,fecha_actual);//id del usuario y el ide del del producto en la tarjeta
+
+//agrgegarCarritoProductoBase(id_us,id,fecha_actual);//id del usuario y el ide del del producto en la tarjeta
+
+        obtenerCarrito(id_us,id,fecha_actual);
+
     }
-    console.log("el ide del producto es: ");
-    console.log(id);
 }
 //datos curso
 function leerDatosCurso(curso) {
@@ -94,8 +94,24 @@ function agrgegarCarritoProductoBase(id_carrito,id_producto,fechaAc) {
         body: raw,
         redirect: 'follow'
     };
-    fetch("https://servidorinfinity.herokuapp.com/api/producto/productocarrito/", requestOptions)
+    fetch("http://localhost:8082/api/producto/productocarrito/", requestOptions)
         .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+}
+function obtenerCarrito(id_us){
+    var id_carr;
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      url="http://localhost:8082/api/producto/idCarrito/"+id_us;
+      fetch(url, requestOptions)
+        .then(response => response.text())
+        .then(data => {
+            id_carr=data;
+            agrgegarCarritoProductoBase(id_carr,id,fecha_actual);
+        })
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
 }

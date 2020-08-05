@@ -22,7 +22,7 @@ function cargarDatos() {
     var requestOptions = {
         method: 'POST'
     }
-    fetch("http://localhost:8082/api/producto/listarTarjetas/" + localStorage.getItem("id_usuario"), requestOptions)
+    fetch("https://servidorinfinity.herokuapp.com/api/producto/listarTarjetas/" + localStorage.getItem("id_usuario"), requestOptions)
         .then(resp => resp.json())
         .then(function (data) {
             procesamiento(data)
@@ -204,7 +204,7 @@ function pagar(valorAPagar) {
         headers: myHeaders,
         body: raw
     };
-    fetch("http://localhost:8082/api/producto/pagar/", requestOptions)
+    fetch("https://servidorinfinity.herokuapp.com/api/producto/pagar/", requestOptions)
         .then(response => response.text())
         .then(result => confiPago(result))
         .catch(error => console.log('error', error));

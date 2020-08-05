@@ -59,8 +59,6 @@ function procesamiento(json) {
                 <div id="contenedorImagen">
                 <img class="card-img-top" id="img${i}" src="" >
                 </div>
-                
-  
                 <p style="border:1;color: white;" class="card-text">${datos[i].descripcion} </p>
                 <a style="border-radius: 15px;"   class="btn btn-primary agregar-carrito" data-id="${datos[i].id_producto}"><i class="fas fa-cart-plus align-middles" ></i>Agregar al carrito</a>
               </div>
