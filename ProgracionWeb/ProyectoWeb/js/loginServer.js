@@ -1,10 +1,12 @@
+var usuario_id=localStorage.getItem('id_usuario')
+
 var formularios = document.getElementById('formularioLog');
 var respuesta = document.getElementById('respuesta');
 var apiUrl = "https://servidorinfinity.herokuapp.com/api/producto/login/";
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-console.log('jaajjaaj')
-formularios.addEventListener('submit', function (e) {
+
+function login () {
   e.preventDefault();
   console.log('vamos a logear ' + formularios.get)
   var datos = new FormData(formularios);
@@ -16,16 +18,48 @@ formularios.addEventListener('submit', function (e) {
     });
   console.log(raw)
   enviar(raw, datos.get('correoUsuario'));
-});
+};
 
 
 
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        
+      console.log('User signed out.');
+    });
+    
+   facebooklogout()
+      localStorage.removeItem('id_usuario')
+  }
+
+  function facebooklogout() {
+    try {
+        if (FB.getAccessToken() != null) {
+            FB.logout(function(response) {
+                // user is now logged out from facebook do your post request or just redirect
+                window.location.replace(href);
+            });
+        } else {
+            // user is not logged in with facebook, maybe with something else
+            window.location.replace(href);
+        }
+    } catch (err) {
+        // any errors just logout
+        window.location.replace(href);
+    }
+   }
 
 //google
 function onSignIn(googleUser) { //cuando inicia sesion con google
-  var profile = googleUser.getBasicProfile();
-  update_user_data(profile);
+  var boo=localStorage.getItem('id_usuario')
+  if(boo===null){
+    var profile = googleUser.getBasicProfile();
+    update_user_data(profile);
+  }
+
 }
+
 
 function update_user_data(profile) {
   var raw = JSON.stringify(
@@ -40,11 +74,15 @@ function update_user_data(profile) {
 function statusChangeCallback(response) {
   console.log('statusChangeCallback');
   console.log(response);
-  if (response.status === 'connected') {
-    testAPI();
-  } else if (response.status === 'not_authorized') {
-    alert('Usuario no autorizado')
+  var boole=localStorage.getItem('id_usuario')
+  if(boole!==null){
+    if (response.status === 'connected') {
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      alert('Usuario no autorizado')
+    }
   }
+  
 }
 
 function checkLoginState() {
@@ -113,9 +151,13 @@ function accion(result, correo) {
   respuesta.appendChild(validez)
   if (result === "Bienvenido") {
     almacenarDatos(correo)
-    //location.href = "http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/"
+    location.href = "index.html"
 
+  }else{
+    signOut() 
+    alert('Ssion cerrdad')
   }
+
 }
 
 function almacenarDatos(correo) {
@@ -140,5 +182,6 @@ function almacenarDatos(correo) {
 function guardarDatosUsuario(id) {
   localStorage.setItem("id_usuario", id);
   console.log('id almecnado ' + id)
-  console.log('el ide que estaba guardado es ' + localStorage.getItem("id_usuasrio"));
+  console.log('el ide que estaba guardado es ' + localStorage.getItem("id_usuario"));
 }
+

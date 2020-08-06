@@ -3,6 +3,7 @@ var formularios = document.getElementById('formularioReg');
 var respuesta = document.getElementById('respuesta');
 var google = document.getElementById('conejillo');
 var apiUrl = "https://servidorinfinity.herokuapp.com/api/producto/usuario/";
+
 var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 cargarEventos();
@@ -65,17 +66,31 @@ function enviarDatos() {
         body: raw,
         redirect: 'follow'
     };
-    fetch(apiUrl, requestOptions)
-        .then(response => response.text())
-        .then(result => acciones(result))
-        .catch(error => console.log('error', error));
-}
 
+    verificarCorreo(datos.get('correoUsuario'))//verifica validez de correo
+    if(correoValido){
+      fetch(apiUrl, requestOptions)
+      .then(response => response.text())
+      .then(result => acciones(result))
+      .catch(error => console.log('error', error));
+    }else{
+      alert('Correo Invalido')
+      correoValido=false;
+    }
+   
+}
+var correoValido=false;
 
 function onSignIn(googleUser) { //cuando inicia sesion con google
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    update_user_data(profile);
+    var p=localStorage.getItem('id_usuario')
+    if(p===null){
+      update_user_data(profile);
+    }else{
+      signOut()
+    }
+    
 }
 
 function update_user_data(profile) {
@@ -89,12 +104,26 @@ function update_user_data(profile) {
             "rol": 'usuario'
         });
     console.log('se va ' + raw)
-   enviar(raw)
+    
 
-
+   
+}
+function verificarCorreo(email){
+  fetch("https://emailverification.whoisxmlapi.com/api/v1?apiKey=at_2Zm9x24S3a2qV23XYoo2jdzhkikA4&emailAddress="+email)
+    .then(response=> response.json())
+    .then(result => verEstado(result))
+    .catch(error=> alert(error))
 
 }
-
+function verEstado(result){
+  var res=result.smtpCheck
+  console.log("el correo es"+res)
+  if(res){
+    correoValido=true
+  }else{
+    correoValido=false;
+  }
+}
 
 //facebook
 function statusChangeCallback(response) {
@@ -169,10 +198,40 @@ function statusChangeCallback(response) {
   }
 
   function acciones(response) {
-    console.log('si llegaaa')
-    if (response === 'true') {
+    console.log('si llegaaa'+response)
+    var arrar=response.split(',')
+    var respuesta=arrar[0]
+    if (respuesta === 'true') {
+      localStorage.setItem('id_usuario',arrar[1])
         location.href = "index.html"
+
     } else {
         alert('El correo ya está registrado')
     }
 }
+
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+      
+    console.log('User signed out.');
+  });
+  
+ facebooklogout()
+    localStorage.removeItem('id_usuario')
+}
+
+function facebooklogout() {
+  try {
+      if (FB.getAccessToken() != null) {
+          FB.logout(function(response) {
+              // user is now logged out from facebook do your post request or just redirect
+              console.log('facebbok crrdado')
+          });
+      } else {
+          
+      }
+  } catch (err) {
+     
+  }
+ }

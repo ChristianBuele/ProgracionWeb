@@ -4,7 +4,6 @@ const m= localStorage.getItem("id_usuario")
     }else{
         document.getElementById('config').setAttribute('href','perfil.html');
     }
-console.log("entra al busdor")
 const productos = [
     {nombre: 'Sesión Basica', valor: 30},
     {nombre: 'Sesión Estandar', valor: 50},
@@ -46,20 +45,45 @@ formulario.addEventListener('keyup',filtrar);
 
 
 
-function onSignIn(googleUser) { //cuando inicia sesion con google
-    var profile = googleUser.getBasicProfile();
+
+function cerrarSesion() {
     
+    localStorage.removeItem('id_usuario')
   }
-function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-        
-      console.log('User signed out.');
+  
+  function onSignIn(googleUser) { //cuando inicia sesion con google
+    var boo=localStorage.getItem('id_usuario')
+    if(boo===null){
+      var profile = googleUser.getBasicProfile();
+      
+    }
+  
+  }
+  function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+      statusChangeCallback(response);
     });
-    
-    FB.logout(function(response) {
-        console.log('Log Out Facebook')
-      });
-      localStorage.setItem("id_usuario",-1)
   }
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    var boole=localStorage.getItem('id_usuario')
+    if(boole!==null){
+      if (response.status === 'connected') {
+        testAPI();
+      } else if (response.status === 'not_authorized') {
+        alert('Usuario no autorizado')
+      }
+    }
+    
+  }
+  function testAPI() {
+    FB.api('/me', { locale: 'en_US', fields: 'id,email' }, function (response) {
+      
+    });
+  
+  }
+  
+
+  
   
