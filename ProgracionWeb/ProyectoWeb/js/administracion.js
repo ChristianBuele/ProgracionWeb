@@ -125,7 +125,7 @@ function cargareventos() {
     }
 }
 function cargarproductis() {
-    var request = new Request('https://servidorinfinity.herokuapp.com/api/producto/cargarProductos/');
+    var request = new Request('http://localhost:8082/api/producto/produ');
     productosEditar()
     function productosEditar() {
         fetch(request)
@@ -142,7 +142,7 @@ function cargarproductis() {
                         ' <tr style="color: aliceblue"><th scope="row">' + data[i].nombre + '</th>' +
                         ' <td>' + data[i].descripcion + '</td>' +
                         '<td>' + data[i].precio + '</td>' +
-                        '<td> <button type="button" onclick="eliminarUs('+data[i].id_producto+')"'+
+                        '<td> <button type="button" onclick="eliPro('+data[i].id_producto+')"'+
                         +'class="btn btn-sm btn-rounded btn-sm my-0 "><i'+
                             'class="far fa-trash-alt"></i> Eliminar</button></span>+'+ '</td> '+
                         ' </tr>'
@@ -150,4 +150,24 @@ function cargarproductis() {
                 }
             }).catch(err => console.log(err))
     }
+}
+function eliPro(e) {
+    console.log("eliminando " + e)
+    var requestOptions = {
+        method: 'POST'
+    }
+    var url = "http://localhost:8082/api/producto/eliminarProducto/" + e ;
+    console.log(url)
+    fetch(url, requestOptions)
+        .then(resp => resp.text())
+        .then(function (data) {
+            proW(data)
+        })
+        .catch(function (error) {
+            console.log('error' + error.message)
+        });
+}
+function proW(e) {
+    console.log('entra a redic')
+    location.href = "admin.html"
 }
