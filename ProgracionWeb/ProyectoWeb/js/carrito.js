@@ -94,7 +94,7 @@ function agrgegarCarritoProductoBase(id_carrito,id_producto,fechaAc) {
         body: raw,
         redirect: 'follow'
     };
-    fetch("http://localhost:8082/api/producto/productocarrito/", requestOptions)
+    fetch("https://servidorinfinity.herokuapp.com/api/producto/productocarrito/", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -105,7 +105,7 @@ function obtenerCarrito(id_us){
         method: 'GET',
         redirect: 'follow'
       };
-      url="http://localhost:8082/api/producto/idCarrito/"+id_us;
+      url="https://servidorinfinity.herokuapp.com/api/producto/idCarrito/"+id_us;
       fetch(url, requestOptions)
         .then(response => response.text())
         .then(data => {

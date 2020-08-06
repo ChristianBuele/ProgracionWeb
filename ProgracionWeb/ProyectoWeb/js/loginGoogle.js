@@ -5,7 +5,7 @@ function onSignIn(googleUser) { //cuando inicia sesion con google
 }
 
 function update_user_data(profile) {
-  var apiUrl = "http://localhost:8082/api/producto/usuario/"
+  var apiUrl = "https://servidorinfinity.herokuapp.com/api/producto/usuario/"
   var datosUsuario = {
     nombre_usuario: profile.getName(),
     apellido_usuario: profile.getName(),

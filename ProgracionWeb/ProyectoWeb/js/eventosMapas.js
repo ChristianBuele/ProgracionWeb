@@ -5,12 +5,23 @@ var tarjeta;
 var datosTarjeta;
 var confirmacionMapa;
 var confirmacionTarjeta;
+const usuarioprueba= localStorage.getItem("id_usuario")
+    if(usuarioprueba===null){
+        console.log('no hay usuario')
+        alert('Antes de comprar debe iniciar sesión')
+        location.href="login.html"
+    }
+cargarDatosFinales();
+function cargarDatosFinales(){
+    var valor=localStorage.getItem('valorFactura');
+    document.getElementById('precioFinal').innerHTML=`<label for="inputPassword4"  id="totalPagar"><i class="fas fa-dollar-sign" ></i> ${valor}</label>`;
+}
 //console.log('el valor a pagar es '+document.getElementById('totalPagar').textContent)
 if (localStorage.getItem('id_usuario') !== 'undefined') {
     console.log("Bienvenido " + localStorage.getItem('id_usuario'))
     cargarDatos();
 } else {
-    location.href = 'http://localhost:81/pro/ProgracionWeb/ProyectoWeb/login.html'
+    location.href = 'login.html'
 }
 
 function guardarSeleccion(e) {

@@ -10,7 +10,7 @@ console.log('cargando imagen')
   let imagen=document.getElementById("imagenProducto").files[0];
 let formData = new FormData();
 formData.append("photo",imagen);
-fetch("http://localhost:8082/api/producto/uploadFiles",
+fetch("https://servidorinfinity.herokuapp.com/api/producto/uploadFiles",
 {
 
   method:"POST",

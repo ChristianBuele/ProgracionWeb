@@ -23,14 +23,14 @@ function vaciarCarrito() {
     var requestOptions = {
         method: 'GET',
       };
-      var urlrt="http://localhost:8082/api/producto/vaciarCarrito/"+id_us;
+      var urlrt="https://servidorinfinity.herokuapp.com/api/producto/vaciarCarrito/"+id_us;
       fetch(urlrt, requestOptions)
         .then(response => response.text())
         .then(result => refrescar())
         .catch(error => console.log('error', error));
 }
 function refrescar(){
-   location.href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/carrito.html";
+   location.href="carrito.html";
     
 }
 function vaciarLocalStorage() {
@@ -43,8 +43,7 @@ function vaciarLocalStorage() {
 
 ////apara eliminiar cosas del carrito
 function eliminarCurso(e) {
-    if(controlador===0){
-        controlador++;
+    
         e.preventDefault();
         console.log('eliminando');
         let curso = e.target.parentElement.parentElement; 
@@ -57,12 +56,13 @@ function eliminarCurso(e) {
                 cursoId = curso.querySelector('a').getAttribute('data-id');
                 eliminarPresetLocalStorage(cursoId);
             }else{
+                console.log('eliminar producto')
                 e.target.parentElement.parentElement.remove();
                 curso = e.target.parentElement.parentElement;
                 cursoId = curso.querySelector('a').getAttribute('data-id');
                 eliminarCursoLocalStorage(cursoId);
             }    
-    }
+    
     
 }
 }
@@ -73,8 +73,8 @@ function eliminarPresetLocalStorage(cursoId){
         method: 'POST',
         redirect: 'follow'
       };
-      url="http://localhost:8082/api/producto/eliminarPresetCarrito/"+localStorage.getItem('id_usuario')+','+cursoId
-      fetch(url, requestOptions)
+      url="https://servidorinfinity.herokuapp.com/api/producto/eliminarpc/"+localStorage.getItem('id_usuario')+','+cursoId
+      fetch(url)
         .then(response => response.text())
         .then(result => actualizarrecio(result))
         .catch(error => console.log('error', error)); 
@@ -82,12 +82,11 @@ function eliminarPresetLocalStorage(cursoId){
 //eliminar del local
 
 function eliminarCursoLocalStorage(curso) {
-    console.log('PERRRO')
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
       };
-      url="http://localhost:8082/api/producto/eliminarcarrpro/"+id_us+','+curso;
+      url="https://servidorinfinity.herokuapp.com/api/producto/eliminarcarrpro/"+id_us+','+curso;
       fetch(url, requestOptions)
         .then(response => response.text())
         .then(result => actualizarrecio(result))
@@ -120,7 +119,7 @@ function cargarPrecios(cursosLS) {
 function leerLocalStorage() {
 
     console.log('cargando datos de presets')
-    url="http://localhost:8082/api/producto/cargarCarPro/"+id_us;
+    url="https://servidorinfinity.herokuapp.com/api/producto/cargarCarPro/"+id_us;
     console.log(url);
     fetch(url)
         .then(resp => resp.json())
@@ -151,7 +150,7 @@ function cargarCarritoPresets(){
     var requestOptions = {
         method: 'POST'
       }
-      fetch("http://localhost:8082/api/producto/productosCarrito/"+localStorage.getItem("id_usuario"), requestOptions)
+      fetch("https://servidorinfinity.herokuapp.com/api/producto/productosCarrito/"+localStorage.getItem("id_usuario"), requestOptions)
         .then(resp => resp.json())
         .then(function (data) {
           addPresetsCarrito(data);

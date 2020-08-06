@@ -1,4 +1,9 @@
-
+const m= localStorage.getItem("id_usuario")
+    if(m===null){
+        document.getElementById('config').setAttribute('href','#');
+    }else{
+        document.getElementById('config').setAttribute('href','perfil.html');
+    }
 console.log("entra al busdor")
 const productos = [
     {nombre: 'Sesión Basica', valor: 30},
@@ -57,3 +62,4 @@ function signOut() {
       });
       localStorage.setItem("id_usuario",-1)
   }
+  

@@ -2,7 +2,7 @@ const botones = document.getElementById('btn_registro');
 var formularios = document.getElementById('formularioReg');
 var respuesta = document.getElementById('respuesta');
 var google = document.getElementById('conejillo');
-var apiUrl = "http://localhost:8082/api/producto/usuario/";
+var apiUrl = "https://servidorinfinity.herokuapp.com/api/producto/usuario/";
 var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 cargarEventos();
@@ -11,7 +11,7 @@ function cargarEventos() {
     
     botones.addEventListener('click', iniciar);
 }
-var apiUrl = "http://localhost:8082/api/producto/usuario/"
+var apiUrl = "https://servidorinfinity.herokuapp.com/api/producto/usuario/"
 function iniciar(e) {
     e.preventDefault();
     var contra = document.getElementById('contra').value;
@@ -44,7 +44,7 @@ function validar_email(email) {
 }
 function enviarDatos() {
     console.log('yendo a enviar')
-    var apiUrl = "http://localhost:8082/api/producto/usuario/"
+    var apiUrl = "https://servidorinfinity.herokuapp.com/api/producto/usuario/"
 
     var datos = new FormData(formularios);
     var myHeaders = new Headers();
@@ -171,7 +171,7 @@ function statusChangeCallback(response) {
   function acciones(response) {
     console.log('si llegaaa')
     if (response === 'true') {
-        location.href = "http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/"
+        location.href = "index.html"
     } else {
         alert('El correo ya está registrado')
     }
