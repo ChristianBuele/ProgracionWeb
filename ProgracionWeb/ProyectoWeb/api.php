@@ -33,7 +33,7 @@ session_start();
  * <https://developers.google.com/youtube/v3/guides/authentication>
  * Please ensure that you have enabled the YouTube Data API for your project.
  */
-$OAUTH2_CLIENT_ID = 'REPLACE_ME';
+$OAUTH2_CLIENT_ID = '689122452455-us9hto3u0u1u8eacssrb7u0b1llhu9q1.apps.googleusercontent.com';
 $OAUTH2_CLIENT_SECRET = 'REPLACE_ME';
 
 $client = new Google_Client();
@@ -118,7 +118,7 @@ if ($client->getAccessToken()) {
   }
 
     $_SESSION[$tokenSessionKey] = $client->getAccessToken();
-} elseif ($OAUTH2_CLIENT_ID == 'REPLACE_ME') {
+} elseif ($OAUTH2_CLIENT_ID == '689122452455-us9hto3u0u1u8eacssrb7u0b1llhu9q1.apps.googleusercontent.com') {
   $htmlBody = <<<END
   <h3>Client Credentials Required</h3>
   <p>
