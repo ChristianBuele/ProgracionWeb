@@ -97,24 +97,8 @@
                 <div class="card" style="background: rgba(255, 255, 255, 0);">
                     <div class="card-body">
                         <div class="table-responsive-lg">
-                            <table class="table table-bordered table-ligth">
-                                <thead>
-                                    <tr style="color: aliceblue;">
-                                        <th scope="col">Fecha</th>
-                                        <th scope="col">Tipo Evento</th>
-                                        <th scope="col">Lugar Evento</th>
-                                        <th scope="col">Cliente</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="color: aliceblue;">
-                                        <td class="pt-3-half" contenteditable="true">31/06/2020</td>
-                                        <td class="pt-3-half" contenteditable="true">Bautizo</td>
-                                        <td class="pt-3-half" contenteditable="true">Cuenca-Remigo Crespo y ...</td>
-                                        <td class="pt-3-half" contenteditable="true">Emanuel Alvarez</td>
-
-                                    </tr>
-                                </tbody>
+                            <table id="Tablea" class="table table-bordered table-ligth">
+        
                             </table>
                         </div>
                     </div>
@@ -127,8 +111,8 @@
                 Si desea generar un informe con los detalles de los eventos genere un informe en el boton generar
                 informe.
             </h1>
-            <button type="button" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-file-alt"></i> Generar
-                Informe</button>
+            <a href="https://servidorinfinity.herokuapp.com/api/producto/pdfreport" type="button" class="btn btn-sm btn-rounded btn-sm my-0"><i class="far fa-file-alt"></i> Generar
+                Informe</a>
 
             <!--mod prodcutos-->
             <br>
@@ -145,24 +129,10 @@
                                     <th class="text-center">Nombre</th>
                                     <th class="text-center">Descripcion</th>
                                     <th class="text-center">Precio</th>
-                                    <th class="text-center">Descuento</th>
                                     <th class="text-center">Eliminar</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr style="color: aliceblue;">
-                                    <td class="pt-3-half" contenteditable="true">Sesión Básica</td>
-                                    <td class="pt-3-half" contenteditable="true">30 fotografias mas ..</td>
-                                    <td class="pt-3-half" contenteditable="true">100$</td>
-                                    <td class="pt-3-half" contenteditable="true">0%</td>
-
-                                    <td>
-                                        <span class="table-remove"><button type="button"
-                                                class="btn btn-sm btn-rounded btn-sm my-0"><i
-                                                    class="far fa-trash-alt"></i> Eliminar</button></span>
-                                    </td>
-                                </tr>
-
+                            <tbody id="Tablep">
                             </tbody>
                         </table>
                     </div>
@@ -371,7 +341,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/buscador.js"></script>
-    
+    <script src="js/administracion.js"></script>
     <script src="js/validaciones.js"></script>
     <script src="js/adminUsuarios.js"></script>
 

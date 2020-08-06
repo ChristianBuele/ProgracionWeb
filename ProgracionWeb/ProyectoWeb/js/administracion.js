@@ -5,6 +5,8 @@ iniciar();
 
 function iniciar(){
   //  btn_addUsuario.addEventListener('click',ejecutarBotones);
+  cargareventos();
+  cargarproductis();
 }
 function ejecutarBotones(e){
     e.preventDefault();
@@ -89,4 +91,63 @@ function alerta()
 	    mensaje = "Has clickado Cancelar";
 	}
 	document.getElementById("ejemplo").innerHTML = mensaje;
+}
+function cargareventos() {
+    var request = new Request('http://localhost:8082/api/producto/listarEventosProximos/');
+    productosCaducados()
+    function productosCaducados() {
+        fetch(request)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                $('#Tablea').append(
+                    '<tr  style="color: aliceblue"> <th scope="col" >Fecha</th>' +
+                    '<th contenteditable scope="col">Tipo Evento</th>' +
+                    '<th scope="col">Lugar Evento</th>' +
+                    '<th scope="col">Cliente</th>' +
+                    '</tr>'
+                )
+                if (data.length == 0) {
+                    alert('No existen Eventos')
+                }
+                for (var i = 0; i < data.length; i++) {
+                    console.log("PEROOOO")
+                    console.log(data[i].fechaEvento);
+                    $('#Tablea').append(
+                        ' <tr style="color: aliceblue"><th scope="row">' + data[i].fechaEvento + '</th>' +
+                        ' <td>' + data[i].nombreProducto + '</td>' +
+                        '<td>' + data[i].direccionEvento + '</td>' +
+                        '<td>' + data[i].nombreUsuario + '</td>' +
+                        ' </tr>'
+                    )
+                }
+            }).catch(err => console.log(err))
+    }
+}
+function cargarproductis() {
+    var request = new Request('https://servidorinfinity.herokuapp.com/api/producto/cargarProductos/');
+    productosEditar()
+    function productosEditar() {
+        fetch(request)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.length == 0) {
+                    alert('No existen Eventos')
+                }
+                for (var i = 0; i < data.length; i++) {
+                    console.log("PEROOOO")
+                    console.log(data[i].fechaEvento);
+                    $('#Tablep').append(
+                        ' <tr style="color: aliceblue"><th scope="row">' + data[i].nombre + '</th>' +
+                        ' <td>' + data[i].descripcion + '</td>' +
+                        '<td>' + data[i].precio + '</td>' +
+                        '<td> <button type="button" onclick="eliminarUs('+data[i].id_producto+')"'+
+                        +'class="btn btn-sm btn-rounded btn-sm my-0 "><i'+
+                            'class="far fa-trash-alt"></i> Eliminar</button></span>+'+ '</td> '+
+                        ' </tr>'
+                    )
+                }
+            }).catch(err => console.log(err))
+    }
 }
