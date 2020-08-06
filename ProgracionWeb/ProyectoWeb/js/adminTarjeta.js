@@ -1,11 +1,14 @@
+const botones=document.getElementById('saveTarjeta');
 var xxx = localStorage.getItem('id_usuario')
 if (jaja === null) {//si es que no hay usuario
     location.href = "index.html"
 } else {
     document.getElementById('idUser').setAttribute('value', xxx);
 }
-cargarTarjetas()
-
+cargarTarjetas();
+console.log('jjhjhjhjhjhjhjhj')
+fac();
+//botones.addEventListener('click',enviar());
 
 function enviar() {
     console.log('enviando')
@@ -31,7 +34,9 @@ function enviar() {
             "nombre_tarjeta": nombre,
             "mes_expiracion": mes,
             "anio_expiracion": anio,
-            "ccv_tarjeta": ccv
+            "ccv_tarjeta": ccv,
+            "saldo": 100000,
+            "estado": 1
         });
     var requestOptions = {
         method: 'POST',
@@ -39,10 +44,11 @@ function enviar() {
         body: raw,
         redirect: 'follow'
     };
-    fetch("https://servidorinfinity.herokuapp.com/api/producto/tarjeta/", requestOptions)
+    fetch("http://localhost:8082/api/producto/tarjeta/", requestOptions)
         .then(response => response.text())
         .then(result => alert(result))
         .catch(error => console.log('error', error));
+        return false;
 }
 
 function cargarTarjetas() {
@@ -78,4 +84,29 @@ function eliminar(e){
 }
 function recarga(sa){
     location.href="configuracion.html"
+}
+function fac(){
+    console.log("PEROOOOOOH")
+    var request = new Request('http://localhost:8082/api/producto/listarFacturas/6');
+    facturas()
+    function facturas() {
+        fetch(request)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.length == 0) {
+                    alert('No existen Eventos')
+                }
+                for (var i = 0; i < data.length; i++) {
+                    $('#tablefac').append(
+                        ' <tr style="color: aliceblue"><th scope="row">' + data[i].id_factura + '</th>' +
+                        ' <td>' + data[i].fecha_factura + '</td>' +
+                        ' <td>' + data[i].nombre_producto+ '</td>' +
+                        '<td>' + data[i].cantidad_factura + '</td>' +
+                        '<td>' + data[i].precio_factura + '</td>' +
+                        ' </tr>'
+                    )
+                }
+            }).catch(err => console.log(err))
+    }
 }
