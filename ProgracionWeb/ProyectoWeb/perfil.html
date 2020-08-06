@@ -92,8 +92,7 @@
                       <div class="col-xl-7 col-lg-12 d-flex">
                           <div class="container align-self-center p-6">
                               <p class="text-muted mb-5">¡Bienvenido!.</p>
-                              <form action="https://servidorinfinity.herokuapp.com/api/producto/updateUser/" method="POST"
-                              enctype="multipart/form-data">
+                              <form >
                                   <div class="form-row mb-2">
                                       <div class="form-group col-md-6">
                                           <label class="font-weigth-bold">Nombre <span class="text-danger">*</span></label>
@@ -108,8 +107,8 @@
                                       <label class="font-weigth-bold">Contraseña<span class="text-danger">*</span></label>
                                       <input id="contra" type="password" name="contrasenia_usuario" class="form-control" placeholder="Ingrese la Contraseña">
                                   </div>
-                                  <input type="text" id="idUser" name="id_usuario" value="">
-                                  <button id="btn_cambios" type="submit" class="btn btn-primary" >Guardar Cambios</button>
+                                  <input class="form-control" type="text" id="idUser" name="id_usuario" value="" readonly="readonly">
+                                  <button  id="btn_cambios" type="submit" class="btn btn-primary" >Guardar Cambios</button>
                               </form>
                               <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | 2020 Infinity Productions</small>
                           </div>
@@ -177,14 +176,14 @@
                                 </button>
                               </div>
                               <!--todo lo de aqui es para lo relacionado con el formulario--->
-                              <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+                              <form action="" id="formulario-tarjeta" class="formulario-tarjeta" target="_blank">
                                 <div class="grupo">
                                   <label for="inputNumero">Número Tarjeta</label>
-                                  <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+                                  <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required>
                                 </div>
                                 <div class="grupo">
                                   <label for="inputNombre">Nombre</label>
-                                  <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+                                  <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required>
                                 </div>
                                 <div class="flexbox">
                                   <div class="grupo expira">
@@ -198,7 +197,7 @@
                                       </div>
                                       <div class="grupo-select">
                                         <select name="year" id="selectYear">
-                                          <option disabled selected>Año</option>
+                                          <option disabled selected >Año</option>
                                         </select>
                                         <i class="fas fa-angle-down"></i>
                                       </div>
@@ -206,11 +205,11 @@
                                     
                                     <div class="grupo ccv">
                                       <label for="inputCCV CCV">CCV</label>
-                                      <input type="text" id="inputCCV" maxlength="3">
+                                      <input type="text" id="inputCCV" maxlength="3" required>
                                     </div>
                                   </div>
                                 </div>
-                                <button type="submit" class="btn-enviar">Añadir</button>
+                                <button id="saveTarjeta" class="btn-enviar">Añadir</button>
                               </form>
                             </div>
                       </div>

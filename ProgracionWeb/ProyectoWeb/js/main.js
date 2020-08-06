@@ -59,7 +59,7 @@ formulario.inputNumero.addEventListener('keyup',(e)=>{
         logoMarca.appendChild(imagen);
     }else if(valorinput[0]==5){
         logoMarca.innerHTML='';
-        const imagen=documents.createElement('img');
+        const imagen=document.createElement('img');
         imagen.src='img/logos/mastercard.png';
         logoMarca.appendChild(imagen);
     }
