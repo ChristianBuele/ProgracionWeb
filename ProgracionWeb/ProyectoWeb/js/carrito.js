@@ -80,8 +80,8 @@ function leerLocalStorage() {
     cursosLS = obtenerCursosLocalStorage();
     console.log(cursosLS);
 }
-function agrgegarCarritoProductoBase(id_carrito,id_producto,fechaAc) {
-    console.log("DATOS")
+function  agrgegarCarritoProductoBase(id_carrito,id_producto,fechaAc) {
+    console.log("DATOS a enviar---------------------------------------")
     console.log(id_carrito)
     console.log(id_producto)
     console.log(fechaAc)    

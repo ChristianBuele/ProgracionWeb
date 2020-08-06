@@ -215,7 +215,7 @@ function pagar(valorAPagar) {
         headers: myHeaders,
         body: raw
     };
-    fetch("https://servidorinfinity.herokuapp.com/api/producto/pagar/", requestOptions)
+    fetch("http://localhost:8082/api/producto/pagar/", requestOptions)
         .then(response => response.text())
         .then(result => confiPago(result))
         .catch(error => console.log('error', error));
