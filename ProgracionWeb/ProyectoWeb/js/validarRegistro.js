@@ -194,7 +194,7 @@ function statusChangeCallback(response) {
         redirect: 'follow'
     };
     fetch(apiUrl, requestOptions)
-        .then(response => response.json())
+        .then(response => response.text())
         .then(result => acciones(result))
         .catch(error => console.log('error', error));
   }
