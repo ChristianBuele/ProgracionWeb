@@ -67,7 +67,7 @@ function enviarDatos() {
         redirect: 'follow'
     };
 
-    verificarCorreo(datos.get('correoUsuario'))//verifica validez de correo
+   // verificarCorreo(datos.get('correoUsuario'))//verifica validez de correo
     if(correoValido){
       fetch(apiUrl, requestOptions)
       .then(response => response.text())
@@ -79,7 +79,7 @@ function enviarDatos() {
     }
    
 }
-var correoValido=false;
+var correoValido=true;
 
 function onSignIn(googleUser) { //cuando inicia sesion con google
     var profile = googleUser.getBasicProfile();
@@ -194,7 +194,7 @@ function statusChangeCallback(response) {
         redirect: 'follow'
     };
     fetch(apiUrl, requestOptions)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(result => acciones(result))
         .catch(error => console.log('error', error));
   }
