@@ -93,7 +93,7 @@ function alerta()
 	document.getElementById("ejemplo").innerHTML = mensaje;
 }
 function cargareventos() {
-    var request = new Request('http://localhost:8082/api/producto/listarEventosProximos/');
+    var request = new Request('https://servidorinfinity.herokuapp.com/api/producto/listarEventosProximos/');
     productosCaducados()
     function productosCaducados() {
         fetch(request)
@@ -125,7 +125,7 @@ function cargareventos() {
     }
 }
 function cargarproductis() {
-    var request = new Request('http://localhost:8082/api/producto/produ');
+    var request = new Request('https://servidorinfinity.herokuapp.com/api/producto/produ');
     productosEditar()
     function productosEditar() {
         fetch(request)
@@ -156,7 +156,7 @@ function eliPro(e) {
     var requestOptions = {
         method: 'POST'
     }
-    var url = "http://localhost:8082/api/producto/eliminarProducto/" + e ;
+    var url = "https://servidorinfinity.herokuapp.com/api/producto/eliminarProducto/" + e ;
     console.log(url)
     fetch(url, requestOptions)
         .then(resp => resp.text())
