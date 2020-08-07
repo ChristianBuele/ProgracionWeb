@@ -215,7 +215,7 @@ function pagar(valorAPagar) {
         headers: myHeaders,
         body: raw
     };
-    fetch("http://localhost:8082/api/producto/pagar/", requestOptions)
+    fetch("https://servidorinfinity.herokuapp.com/api/producto/pagar/", requestOptions)
         .then(response => response.text())
         .then(result => confiPago(result))
         .catch(error => console.log('error', error));
@@ -226,7 +226,7 @@ function confiPago(band) {
     if (band === "true") {
         console.log('Pago Exitoso')
         alert('Gracias por su compra. La factura fue enviada a su correo');
-        location.href="http://localhost:81/pro/ProgracionWeb/ProyectoWeb/wordpress/"
+        location.href="graciasCompra.html"
     } else {
         alert('No se ha podido realizar el pago ' + band);
     }

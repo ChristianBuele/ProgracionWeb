@@ -4,14 +4,16 @@ $(function() {
     $("form").on("submit", function(e) {
        e.preventDefault();
        // prepare the request
+       console.log('entra a buscar video')
        var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
             q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
-            maxResults: 3,
+            maxResults: 10,
             order: "viewCount",
             publishedAfter: "2015-01-01T00:00:00Z"
-       }); 
+       });
+       
        // execute the request
        request.execute(function(response) {
           var results = response.result;
@@ -33,8 +35,9 @@ function resetVideoHeight() {
 }
 
 function init() {
-    gapi.client.setApiKey("AIzaSyDTjj0LYFceTbumku29dB71PpV6cyVzZQ8");
-    gapi.client.load("youtube", "v3", function() {
-        // yt api is ready
+   // gapi.client.setApiKey("AIzaSyDTjj0LYFceTbumku29dB71PpV6cyVzZQ8");
+   gapi.client.setApiKey("AIzaSyCQXwzcP_yqitGaXFPT1XHms2aiFfnbRms");
+   
+    gapi.client.load("youtube", "v3", function() {  // yt api is ready
     });
 }
