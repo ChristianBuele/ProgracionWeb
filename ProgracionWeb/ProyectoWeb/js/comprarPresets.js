@@ -16,6 +16,6 @@ var requestOptions = {
 };
 fetch("https://servidorinfinity.herokuapp.com/api/producto/preCarrito/", requestOptions)
     .then(response => response.text())
-    .then(result => console.log(result))
+    .then(result => alert('Preset Agregado:'+result))
     .catch(error => console.log('error', error));
 }

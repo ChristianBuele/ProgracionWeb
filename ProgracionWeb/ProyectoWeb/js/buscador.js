@@ -49,6 +49,8 @@ formulario.addEventListener('keyup',filtrar);
 function cerrarSesion() {
     
     localStorage.removeItem('id_usuario')
+    alert('Vuelve Pronto')
+
   }
   
   function onSignIn(googleUser) { //cuando inicia sesion con google

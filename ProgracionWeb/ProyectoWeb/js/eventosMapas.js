@@ -127,6 +127,7 @@ function guardarUbicaciones() {
         } else {
             console.log('cargando' + markerEntrega.getPosition())
             confirmacionMapa = true;
+            alert('Ubicacioon Guardada')
         }
     } catch (error) {
         alert('Espere un momento')
