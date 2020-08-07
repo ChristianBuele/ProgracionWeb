@@ -67,7 +67,7 @@ function enviarDatos() {
         redirect: 'follow'
     };
 
-   // verificarCorreo(datos.get('correoUsuario'))//verifica validez de correo
+    verificarCorreo(datos.get('correoUsuario'))//verifica validez de correo
     if(correoValido){
       fetch(apiUrl, requestOptions)
       .then(response => response.text())
@@ -79,7 +79,7 @@ function enviarDatos() {
     }
    
 }
-var correoValido=true;
+var correoValido=false;
 
 function onSignIn(googleUser) { //cuando inicia sesion con google
     var profile = googleUser.getBasicProfile();
