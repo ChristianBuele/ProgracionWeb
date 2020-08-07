@@ -142,8 +142,7 @@ function cargarproductis() {
                         ' <tr style="color: aliceblue"><th scope="row">' + data[i].nombre + '</th>' +
                         ' <td>' + data[i].descripcion + '</td>' +
                         '<td>' + data[i].precio + '</td>' +
-                        '<td> <button type="button" onclick="eliPro('+data[i].id_producto+')"'+
-                        +'class="btn btn-sm btn-rounded btn-sm my-0 "><iclass="far fa-trash-alt"></i> Eliminar</button></span>+</td> '+
+                        '<td> <button type="button" onclick="eliPro('+data[i].id_producto+')" class="btn btn-sm btn-rounded btn-sm my-0 "><i class="far fa-trash-alt"></i> Eliminar</button> </span></td> '+
                         ' </tr>'
                     )
                 }
