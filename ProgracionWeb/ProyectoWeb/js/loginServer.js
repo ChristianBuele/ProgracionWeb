@@ -167,6 +167,7 @@ function almacenarDatos(correo) {
       headers: myHeaders,
       // redirect: 'follow'
     };
+    console.log('se va el correo '+correo)
     fetch("https://servidorinfinity.herokuapp.com/api/producto/correo/" + correo, requestOptions)
       .then(response => response.text())
       .then(result => guardarDatosUsuario(result))
