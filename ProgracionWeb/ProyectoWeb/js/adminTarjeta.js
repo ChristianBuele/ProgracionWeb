@@ -87,7 +87,7 @@ function recarga(sa){
 }
 function fac(){
     console.log("PEROOOOOOH")
-    var request = new Request('http://localhost:8082/api/producto/listarFacturas/6');
+    var request = new Request('https://servidorinfinity.herokuapp.com/api/producto/listarFacturas/6');
     facturas()
     function facturas() {
         fetch(request)
