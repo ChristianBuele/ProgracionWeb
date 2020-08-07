@@ -37,16 +37,13 @@ function login () {
     try {
         if (FB.getAccessToken() != null) {
             FB.logout(function(response) {
-                // user is now logged out from facebook do your post request or just redirect
-                window.location.replace(href);
+           
             });
         } else {
-            // user is not logged in with facebook, maybe with something else
-            window.location.replace(href);
+         
         }
     } catch (err) {
-        // any errors just logout
-        window.location.replace(href);
+      
     }
    }
 
@@ -151,8 +148,8 @@ function accion(result, correo) {
   respuesta.appendChild(validez)
   if (result === "Bienvenido") {
     almacenarDatos(correo)
-    location.href = "index.html"
-
+   
+    
   }else{
     signOut() 
     alert('Ssion cerrdad')
@@ -171,7 +168,7 @@ function almacenarDatos(correo) {
     fetch("https://servidorinfinity.herokuapp.com/api/producto/correo/" + correo, requestOptions)
       .then(response => response.text())
       .then(result => guardarDatosUsuario(result))
-      .catch(error => alert('Intente de nuevo ' + error));
+      .catch(error => alert(erro+'Intente de nuevo ' + error));
 
 
   } else {
@@ -184,5 +181,6 @@ function guardarDatosUsuario(id) {
   localStorage.setItem("id_usuario", id);
   console.log('id almecnado ' + id)
   console.log('el ide que estaba guardado es ' + localStorage.getItem("id_usuario"));
+  location.href = "index.html"
 }
 

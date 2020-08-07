@@ -106,7 +106,7 @@ function update_user_data(profile) {
             "rol": 'usuario'
         });
     console.log('se va ' + raw)
-    
+    enviar(raw);
 
    
 }
