@@ -85,10 +85,12 @@ function onSignIn(googleUser) { //cuando inicia sesion con google
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     var p=localStorage.getItem('id_usuario')
+    console.log("el id del usario en el local "+p)
     if(p===null){
       update_user_data(profile);
     }else{
       signOut()
+      console.log('cerradno sesion de google')
     }
     
 }

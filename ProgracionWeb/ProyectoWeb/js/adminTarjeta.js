@@ -44,7 +44,7 @@ function enviar() {
         body: raw,
         redirect: 'follow'
     };
-    fetch("http://localhost:8082/api/producto/tarjeta/", requestOptions)
+    fetch("https://servidorinfinity.herokuapp.com/api/producto/tarjeta/", requestOptions)
         .then(response => response.text())
         .then(result => alert(result))
         .catch(error => console.log('error', error));
@@ -57,7 +57,7 @@ function cargarTarjetas() {
         method: 'POST',
         redirect: 'follow'
     };
-    fetch("https://servidorinfinity.herokuapp.com/api/producto/listarTarjetas/" + 6, requestOptions)
+    fetch("https://servidorinfinity.herokuapp.com/api/producto/listarTarjetas/" + localStorage.getItem("id_usuario"), requestOptions)
         .then(response => response.json())
         .then(result => procesarTarjeta(result))
         .catch(error => console.log('error', error));
